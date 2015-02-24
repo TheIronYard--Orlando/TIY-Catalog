@@ -19,5 +19,15 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 
 ### A Shopper can browse Products so that Sellers can sell Products and Buyers can find something that they like
     * Responsive layout : sm, med. and Lg 
+    
 ### A Shopper can Browse Products by category so that the shopper can narrow their search options.
     * Responsive layout : sm, med. and Lg 
+    
+### A Shopper can view Details of that Product so that the Shopper can better understand the Product
+    * put product details OF browse mode HERE
+    
+### A Shopper can view thumbnails so that Shopper can view Product Details
+    * Selecting options for a Product is a part of Placing an order
+    * adding a Line Item to an order... 
+    
+### A Shopper can add products to their shopping cart...(EPIC!)
