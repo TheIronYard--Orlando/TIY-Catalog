@@ -34,8 +34,9 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 * toggling between list and grid view
 
 ### A Shopper can view Details of that Product so that the Shopper can better understand the Product
-* put product details of browse mode HERE
+* put product details of Details mode HERE
 * price, description, title, image...
+
 ### A Shopper can view options for a Product so that Shopper can see what is available
 * sizes, colors...variations
 
