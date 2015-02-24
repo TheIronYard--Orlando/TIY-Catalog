@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'init' ]
+2 info using npm@2.1.18
+3 info using node@v0.10.35
+4 verbose node symlink /usr/local/bin/node
+5 verbose config Skipping project config: /Users/GarrettGraham/.npmrc. (matches userconfig)
+6 silly package data undefined
+7 info init written successfully
+8 verbose stack Error: Invalid name: "npm install browser wiredep browser-sync"
+8 verbose stack     at ensureValidName (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:322:15)
+8 verbose stack     at Object.module.exports.fixNameField (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:211:5)
+8 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:30:38
+8 verbose stack     at Array.forEach (native)
+8 verbose stack     at normalize (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:29:15)
+8 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:342:33)
+8 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:126:33)
+8 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:331:40
+8 verbose stack     at evalmachine.<anonymous>:272:14
+8 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+9 verbose cwd /Users/GarrettGraham/GitHub/TIY-Catalog
+10 error Darwin 14.0.0
+11 error argv "node" "/usr/local/bin/npm" "init"
+12 error node v0.10.35
+13 error npm  v2.1.18
+14 error Invalid name: "npm install browser wiredep browser-sync"
+15 error If you need help, you may report this error at:
+15 error     <http://github.com/npm/npm/issues>
+16 verbose exit [ 1, true ]
