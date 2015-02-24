@@ -19,14 +19,27 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 
 ### A Shopper can browse Products so that Sellers can sell Products and Buyers can find something that they like
 * Responsive layout : sm, med. and Lg 
+* toggling between list and grid view
+
+#### A Shopper can Browse list view
+* link to the layout
+
+#### A Shopper can Browse by Grid
 
 ### A Shopper can Browse Products by category so that the shopper can narrow their search options.
 * Responsive layout : sm, med. and Lg 
+* toggling between list and grid view
 
 ### A Shopper can view Details of that Product so that the Shopper can better understand the Product
-* put product details OF browse mode HERE
+* put product details of browse mode HERE
+* price, description, title, image...
+### A Shopper can view options for a Product so that Shopper can see what is available
+* sizes, colors...variations
 
-### A Shopper can view thumbnails so that Shopper can view Product Details
+### A shopper can view images for a Product so that they can see what Product is being purchased.
+* images: display in an easily navigable way 
+* something that is responsive and usable on mobile 
+* thumbnails so that Shopper can view Product Details
 * Selecting options for a Product is a part of Placing an order
 * adding a Line Item to an order... 
     
