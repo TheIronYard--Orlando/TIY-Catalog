@@ -15,7 +15,7 @@ class Etsy
 	end
 
 	def trending(which=:trending)
-		self.class.get("/listings/#{which}?limit=100&offset=250&api_key=hlq9zyrpxmcx4vb4vetw22a8/")
+		self.class.get("/listings/#{which}?limit=100&offset=250&api_key=hlq9zyrpxmcx4vb4vetw22a8")
 	end
 
 	def shop(which=:etsy_shop_id)
