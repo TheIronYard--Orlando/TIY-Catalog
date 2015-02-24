@@ -45,3 +45,7 @@ end
 
 gem 'rest-client'
 gem 'multi_json'
+
+gem 'httparty'
+gem 'pry-rails'
+gem 'awesome_print'
