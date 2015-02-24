@@ -15,3 +15,9 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 * smurfing is hard
 * always remember to smurf!
 * don't forget to smurf the smurfs after smurfing
+
+
+### A Shopper can browse Products so that Sellers can sell Products and Buyers can find something that they like
+    * Responsive layout : sm, med. and Lg 
+### A Shopper can Browse Products by category so that the shopper can narrow their search options.
+    * Responsive layout : sm, med. and Lg 
