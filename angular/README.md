@@ -49,3 +49,4 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 * Selecting options for a Product is a part of Placing an order
 * adding a Line Item to an order...
 * API approval for OAuth1.0
+* otherwise, guest-cart/local-storage/firebase
