@@ -23,8 +23,11 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 
 #### A Shopper can Browse list view
 * link to the layout
+* add details about what can be seen in list mode
 
 #### A Shopper can Browse by Grid
+* link to the layout
+* add details about what can be seen in list mode
 
 ### A Shopper can Browse Products by category so that the shopper can narrow their search options.
 * Responsive layout : sm, med. and Lg 
