@@ -1,0 +1,19 @@
+{
+  "name": "TIY-Catalog",
+  "version": "0.0.0",
+  "description": "Using the [Esty API](http://etsy.com/developers) and [these credentials](#api-credentials), we're going to build a reasonable facsimile of [Etsy.com](http://etsy.com) that's responsive and showcases the [Trending Items](https://www.etsy.com/trending) and [listing pages](https://www.etsy.com/search/toys-and-games) for [select categories](https://www.etsy.com/categories). Then we'll take a crack at trying to _buy_ stuff!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheIronYard--Orlando/TIY-Catalog"
+  },
+  "author": "David Rogers <david@theironyard.com>",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/TheIronYard--Orlando/TIY-Catalog/issues"
+  },
+  "homepage": "https://github.com/TheIronYard--Orlando/TIY-Catalog"
+}
