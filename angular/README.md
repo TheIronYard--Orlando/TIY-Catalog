@@ -48,3 +48,4 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 ### A Shopper can add products to their shopping cart...(EPIC!)
 * Selecting options for a Product is a part of Placing an order
 * adding a Line Item to an order...
+* API approval for OAuth1.0
