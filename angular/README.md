@@ -44,7 +44,7 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 * images: display in an easily navigable way 
 * something that is responsive and usable on mobile 
 * thumbnails so that Shopper can view Product Details
-* Selecting options for a Product is a part of Placing an order
-* adding a Line Item to an order... 
     
 ### A Shopper can add products to their shopping cart...(EPIC!)
+* Selecting options for a Product is a part of Placing an order
+* adding a Line Item to an order...
