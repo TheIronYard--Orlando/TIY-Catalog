@@ -10,11 +10,11 @@ Now to keep us on track, we should write out some _User Stories_ and create some
 
 ## User Stories
 
-### A Smurf can smurf so that Smurfs can smurf (XX)
-
-* smurfing is hard
-* always remember to smurf!
-* don't forget to smurf the smurfs after smurfing
+> ### A Smurf can smurf so that Smurfs can smurf (XX)
+>
+> * smurfing is hard
+> * always remember to smurf!
+> * don't forget to smurf the smurfs after smurfing
 
 
 ### A Shopper can browse Products so that Sellers can sell Products and Buyers can find something that they like
