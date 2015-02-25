@@ -10,10 +10,13 @@
     "type": "git",
     "url": "https://github.com/TheIronYard--Orlando/TIY-Catalog"
   },
-  "author": "David Rogers <david@theironyard.com>",
+  "author": "David Rogers <david@theironyard.com>, Taylor Foster <tagfoster90@gmail.com>",
   "license": "GPL",
   "bugs": {
     "url": "https://github.com/TheIronYard--Orlando/TIY-Catalog/issues"
   },
-  "homepage": "https://github.com/TheIronYard--Orlando/TIY-Catalog"
+  "homepage": "https://github.com/TheIronYard--Orlando/TIY-Catalog",
+  "dependencies": {
+    "lodash": "^3.3.1"
+  }
 }
