@@ -1,39 +1,38 @@
 .product-wrapper{
     color: cornflowerblue;
 }
-.product-img {
-    background-image: url('http://lorempixel.com/output/nature-q-c-350-350-5.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-bottom: 70%;
-    width: 70%;
+.product-detail > img {
+    padding: 2em;
+    border: solid cornflowerblue 4px;
 }
+/******
+    Changing the position to relative on all product divs for the top right button
+    We can totally take this out if it breaks too much stuff
+*******/
 .product-detail {
     position: relative;
 }
 
-.product-name {
+.flip-button {
     position: absolute;
-    left: 0.5em;
+    color: cornflowerblue;
+    padding: 0.3ex 0.5em;
+    right: 1.1em;
+    top: 0;
+    border: solid cornflowerblue 4px;
+}
+
+.product-name {
+    display: block;
+    float: left;
     margin: 0.5ex 0;
     font-weight: 400;
 }
 
 .price {
-    position: absolute;
-    right: 0.5em;
+    text-align: right;
+    display: block;
     margin: 0.7ex 0;
     font-size: 1.5em;
     font-weight: bolder;
-}
-
-/******************
-    Media Queries
-******************/
-
-@media (max-width: 480px) {
-    .product-detail{
-        margin: 0 auto;
-        width: 80%;
-    }
 }
