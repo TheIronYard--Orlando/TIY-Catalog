@@ -96,17 +96,33 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+.container h1 {
+    font-size: 4em;
+}
+
 ul {
     list-style: none;
 }
 
 
-#navigation {
+/*#navigation {
     background-color: purple;
+}*/
+
+
+.navbar a {
+    text-decoration: none;
+    color: #FFF;
 }
+.navbar  li {
+    margin-top: .75ex;
+    font-size: 3ex; 
+}   
 
-
-
+#content {
+    margin: auto;
+}   
 
 
 
