@@ -3,15 +3,22 @@
 $blue: cornflowerblue;
 
 .product-wrapper {
+  @extend .container;
+
   color: $blue;
   /**
    * Changing the position to relative on all product divs for the top right button
    * We can totally take this out if it breaks too much stuff
    */
   .product-detail {
+    @extend .col-md-4;
+    @extend .col-sm-6;
+
     position: relative;
     border-radius: 0;
     img {
+      @extend .img-responsive;
+      
       padding: 2em;
       border: solid $blue 4px;
     }
