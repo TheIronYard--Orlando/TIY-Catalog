@@ -1,0 +1,7 @@
+<h1>Etsy </h1>
+
+  <% @listings.each do |list| %>
+    <ul>
+      <li><%= link_to list.title, listing_path(list.id) %></li>
+     </ul> 
+  <% end %>

@@ -13,3 +13,58 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic);
+* {
+  padding: 0;
+  margin: 0;
+}
+ body {
+  font-family: 'Merriweather', serif;
+ }
+h1 {
+  text-align: center;
+  font-size: 4.1em;
+  background-color: teal;
+  padding: 20px;
+  color: white;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+h2 {
+  padding: 15px;
+}
+h3 {
+  padding: 20px;
+}
+p {
+  padding: 20px;
+}
+li {
+  list-style: none;
+  padding: 15px;
+}
+a {
+  text-decoration: none;
+}
+.back_button {
+  padding: 10px;
+  margin: 0 0 0 10px;
+  background-color: cadetblue;
+  border-radius: -3px;
+  co-lor: white;
+  font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
