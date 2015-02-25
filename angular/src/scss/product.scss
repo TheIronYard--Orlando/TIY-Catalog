@@ -18,7 +18,7 @@ $blue: cornflowerblue;
     border-radius: 0;
     img {
       @extend .img-responsive;
-      
+
       padding: 2em;
       border: solid $blue 4px;
     }
@@ -30,10 +30,8 @@ $blue: cornflowerblue;
       width: 20%;
       margin-top: -0.8ex;
       border-radius: 0;
-      border-right: solid $blue 2px;
-      border-left: solid $blue 2px;
-      border-top: solid $blue 4px;
-      border-bottom: solid $blue 4px;
+      border: solid $blue;
+      border-width: 4px 2px;
     }
   }
   /*
