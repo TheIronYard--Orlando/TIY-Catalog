@@ -1,10 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+include 'Httparty'
+
+
 etsy = Etsy.new
 trending = etsy.trending
 listings = etsy.listings
@@ -32,8 +28,10 @@ listings['results'].each do |listing|
 
 	)
 
-	images = listings['results'].images(listing['listing_id'])
-	Image.create
+
+
+	images = HTTParty.get('https://openapi.etsy.com/v2/listings/#{listing['listing_id']}/images?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8' )
+	Image.create()
 
 
 			shop = etsy.shop(listing['listing_id'])
