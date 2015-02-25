@@ -1,0 +1,26 @@
+.product-wrapper{
+    color: cornflowerblue;
+}
+.product-detail > img {
+    padding: 2em;
+    border: solid cornflowerblue 4px;
+}
+/******
+    Changing the position to relative on all product divs for the top right button
+    We can totally take this out if it breaks too much stuff
+*******/
+
+.product-name {
+    display: block;
+    float: left;
+    margin: 0.5ex 0;
+    font-weight: 400;
+}
+
+.price {
+    text-align: right;
+    display: block;
+    margin: 0.7ex 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
