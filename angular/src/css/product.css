@@ -1,21 +1,27 @@
 .product-wrapper{
     color: cornflowerblue;
 }
-.product-img > img {
-    padding: 2em;
-    border: solid cornflowerblue 4px;
+.product-img {
+    background-image: url('http://lorempixel.com/output/nature-q-c-350-350-5.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 70%;
+    width: 70%;
+}
+.product-detail {
+    position: relative;
 }
 
 .product-name {
-    display: block;
-    float: left;
+    position: absolute;
+    left: 0.5em;
     margin: 0.5ex 0;
     font-weight: 400;
 }
 
 .price {
-    text-align: right;
-    display: block;
+    position: absolute;
+    right: 0.5em;
     margin: 0.7ex 0;
     font-size: 1.5em;
     font-weight: bolder;
