@@ -11,16 +11,32 @@
 *******/
 .product-detail {
     position: relative;
+    border-radius: 0;
 }
-
-.flip-button {
-    position: absolute;
-    color: cornflowerblue;
-    padding: 0.3ex 0.5em;
-    right: 1.1em;
-    top: 0;
-    border: solid cornflowerblue 4px;
+.button-nav > .btn-group {
+    
 }
+.product-select {
+    width: 100%;
+    display: inline;
+}
+.product-select > .btn {
+    width: 20%;
+    margin-top: -0.8ex;
+    border-radius: 0;
+    border-right: solid cornflowerblue 2px;
+    border-left: solid cornflowerblue 2px;
+    border-top: solid cornflowerblue 4px;
+    border-bottom: solid cornflowerblue 4px;
+}
+/*
+.product-select > .btn:first-child {
+    border-left: solid cornflowerblue 4px;
+}
+.product-select > .btn:last-child {
+    border-right: solid cornflowerblue 4px;
+}
+*/
 
 .product-name {
     display: block;
