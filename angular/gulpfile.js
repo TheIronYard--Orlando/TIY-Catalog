@@ -3,7 +3,11 @@
 
  gulp.task('sass', function() {
 	gulp.src('src/scss/*.scss')
-		.pipe(sass())
+		.pipe(sass({
+          includePaths: [
+             'bower_components/'
+          ]
+        }))
 		.pipe(gulp.dest('src/css'));
  });
 
