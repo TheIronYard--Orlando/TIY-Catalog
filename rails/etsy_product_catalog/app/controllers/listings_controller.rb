@@ -1,11 +1,11 @@
 class ListingsController < ApplicationController
 
 	def index
-
-	end
+    @listings = Listing.all
+  end
 
 	def show
-
-	end
+    @listing = Listing.find(params[:id])
+  end
 
 end
