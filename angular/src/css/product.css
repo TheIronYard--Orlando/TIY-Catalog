@@ -1,24 +1,8 @@
 .product-wrapper{
     color: cornflowerblue;
 }
-.product-detail > img {
+.product-img > img {
     padding: 2em;
-    border: solid cornflowerblue 4px;
-}
-/******
-    Changing the position to relative on all product divs for the top right button
-    We can totally take this out if it breaks too much stuff
-*******/
-.product-detail {
-    position: relative;
-}
-
-.flip-button {
-    position: absolute;
-    color: cornflowerblue;
-    padding: 0.3ex 0.5em;
-    right: 1.1em;
-    top: 0;
     border: solid cornflowerblue 4px;
 }
 
@@ -37,3 +21,13 @@
     font-weight: bolder;
 }
 
+/******************
+    Media Queries
+******************/
+
+@media (max-width: 480px) {
+    .product-detail{
+        margin: 0 auto;
+        width: 80%;
+    }
+}
