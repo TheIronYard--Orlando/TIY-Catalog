@@ -27,14 +27,23 @@
     <!-- endbower -->
 
 </head>
-
 <style type="text/css">
+    img {
+        border: 1em solid lightgray;
+        text-align: center;
+    }
+    
+    img:hover {
+        border: 1em solid gray;
+    }
+    
     h1 {
         color: #47a3da;
     }
     
     span {
         color: #47a3da;
+        text-align: center;
     }
     
     p {
@@ -43,16 +52,18 @@
     
     button {
         color: #47a3da;
+        margin-bottom: 5em;
     }
     
     .container {
-        border: 1px solid #47a3da;
+        border: 3px solid #47a3da;
         Padding-top: 2em;
+        margin-top: 3em;
+        margin-bottom: 3em;
     }
     
     .tab-content {
         padding-top: 2em;
-        border-top: 1px solid #47a3da;
     }
     
     .product-list {
@@ -62,108 +73,191 @@
     li {
         display: block;
     }
+    
+    <!-- Stuff Sam Added --> .container {
+        border: 5px solid #47a3da;
+    }
+    
+    .cartbutton {
+        font-size: 1em;
+    }
+    
+    .navbar {
+        border-bottom: 3px solid #58A3D5;
+        right: 0;
+        padding-bottom: 1em;
+        padding-top: 1em;
+        width: 100%;
+    }
+    
+    .navAnchors {
+        float: right;
+        font-size: 2em;
+        padding-bottom: 1em;
+        padding-right: 1em;
+        text-decoration: none !important;
+    }
+    
+    .navAnchor:hover {
+        color: #CDCDCD;
+        background-color: #CDCDCD;
+    }
+    
+    .navAnchor:before::hover {
+        color: #CDCDCD;
+        background-color: #CDCDCD;
+    }
+    
+    h3 {
+        color: #47a3da;
+    }
+    
+    .widget {
+        font-size: 2em;
+        color: #58A3D6;
+    }
+    
+    span {
+        color: #C0C0C0;
+        font-size: 2em;
+    }
+    
+    .description {
+        color: #59A4D7;
+    }
+    
+    strong {
+        font-stretch: condensed;
+    }
+    
+    .listimag {
+        border: none;
+    }
+    
+    button {
+        color: white;
+        background-color: #47a3da;
+        border-radius: 2px;
+        height: 3em;
+        padding: 1em;
+    }
+    
+    button:hover {}
+    
+    button > a {
+        color: white;
+    }
+    
+    .listli {
+        padding-bottom: 1em;
+    }
 </style>
+
 
 <body>
 
-    <header></header>
-
     <div class="container">
 
-        <nav>
-            <ul class="nav nav-pills" role="tablist">
-                <li role="presentation" class="active">
-                    <a class="glyphicon glyphicon-th" href="#grid" role="tab" data-toggle="tab"></a>
-                </li>
-                <li role="presentation">
-                    <a class="glyphicon glyphicon-th-list" href="#list" role="tab" data-toggle="tab"></a>
-                </li>
+        <nav class="navbar">
+            <!--
+           <ul class="nav nav-pills col-xs-offset-8 col-sm-offset-10 col-md-offset-10" role="tablist">
+               <li role="presentation" class="active">
+-->
+            <a class="navAnchors glyphicon glyphicon-th" href="#grid" role="tab" data-toggle="tab"></a> <span>&nbsp;&nbsp;</span>
+            <!--
+               </li>
+               <li role="presentation">
+-->
+            <a class="navAnchors glyphicon glyphicon-th-list" href="#list" role="tab" data-toggle="tab"></a>
+            <!--
+            </li>
 
-            </ul>
+</ul>
+-->
         </nav>
 
         <section class="tab-content" ng-controller="ProductController as item">
             <div class="tab-pane active" id="grid">
                 <!--this div is for the grid layout-->
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img class="text-center" src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160" class="grid-">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
                     <button>Add to cart</button>
                 </div>
-                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4">
-                    <img src="http://lorempixel.com/200/200">
+                <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img src="http://lorempixel.com/160/160">
                     <h1>Widget</h1>
                     <span>$5.00</span>
                     <p>This is the most spectacular description of all time. Dont you think?</p>
@@ -171,129 +265,217 @@
                 </div>
             </div>
 
-
             <!--this div is for the grid layout-->
             <div class="tab-pane" id="list">
                 <ul class="product-list">
-                    <li>
+
+                    <li class="col-md-12 listli">
                         <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
+                            <img src="http://lorempixel.com/160/160" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
                             <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="col-md-12 listli">
+                        <div>
+                            <img src="http://lorempixel.com/100/100" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">Widget</h3>
+                        <div class="col-md-2 col-xs-4 price">
+                            <span>$5.00</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">This is the most spectacular description of all time. Dont you think?</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
                         </div>
                     </li>
 
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
 
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
 
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <img src="http://lorempixel.com/200/200">
-                            <h1>Widget</h1>
-                            <span>$5.00</span>
-                            <p>This is the most spectacular description of all time. Dont you think?</p>
-                            <button>Add to cart</button>
-                        </div>
-                    </li>
                 </ul>
             </div>
             <!--this div is for the list layout-->
