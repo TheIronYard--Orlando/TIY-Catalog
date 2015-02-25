@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  listing_image_id: 1
+  etsy_listing_id: 1
+  rank: 1
+  url_75x75: MyString
+  url_fullxfull: MyString
+  url_170x135: MyString
+  full_height: 1
+  full_width: 1
+
+two:
+  listing_image_id: 1
+  etsy_listing_id: 1
+  rank: 1
+  url_75x75: MyString
+  url_fullxfull: MyString
+  url_170x135: MyString
+  full_height: 1
+  full_width: 1
