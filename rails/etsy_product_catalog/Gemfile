@@ -15,6 +15,7 @@ gem 'httparty'
 gem 'pry-rails'
 gem 'awesome_print'
 gem 'etsy'
+gem "figaro"
 
 group :development, :test do
   gem 'byebug'
