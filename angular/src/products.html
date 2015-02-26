@@ -181,10 +181,10 @@
             <div class="tab-pane active" id="grid">
                 <!--this div is for the grid layout-->
                 <div ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
-                    <{{product.MainImage.url_75}} img class="text-center" src="http://lorempixel.com/160/160">
+                    <img class="text-center" ng-src="{{item.MainImage[0].url_75x75}}">
                     <h1>{{item.title}}</h1>
                     <span>{{item.price}}</span>
-                    <p>This is the most spectacular description of all time. Dont you think?</p>
+                    <p>{{item.description}}</p>
                     <button>Add to cart</button>
                 </div>
                 <div ng-repeat="product in item.products" class="col-xs-12 col-sm-6 col-md-4 text-center">
