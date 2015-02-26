@@ -27,9 +27,10 @@ h1 {
   background-color: teal;
   padding: 20px;
   color: white;
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+  -moz-box-shadow:    1px 1px 3px 4px #ccc;
+  -webkit-box-shadow: 1px 1px 3px 4px #ccc;
+  box-shadow:         1px 1px 3px 4px #ccc;
+  margin-bottom: 30px;
 }
 h2 {
   padding: 15px;
@@ -44,18 +45,37 @@ li {
   list-style: none;
   padding: 15px;
 }
-a {
+a, .back_button {
+  color: #2980b9;
+  text-decoration:none;
+  /*the Transition*/
+  transition:ease .4s;
+  -webkit-transition:ease .4s;
+  -ms-transition:ease .4s;
+  -moz-transition:ease .4s;
+  -o-transition:ease .4s;
+}
+a:hover {
   text-decoration: none;
+  color: #666;
 }
 .back_button {
   padding: 10px;
   margin: 0 0 0 10px;
   background-color: cadetblue;
-  border-radius: -3px;
+  border-radius: 3px;
   color: white;
   font-size: 1.2em;
 }
-
+.back_button:hover {
+  text-decoration:none;
+  background-color: darkcyan;
+  color: #ecf0f1;
+}
+.to_the_right {
+  text-align: right;
+  padding-right: 40px;
+}
 
 
 
