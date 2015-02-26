@@ -85,7 +85,7 @@
     .navbar {
         border-bottom: 3px solid #58A3D5;
         right: 0;
-        padding-bottom: 1em;
+        margin-bottom: 0em;
         padding-top: 1em;
         width: 100%;
     }
@@ -113,16 +113,20 @@
     }
     
     .widget {
+        margin-top: 2.2em;
         font-size: 2em;
         color: #58A3D6;
     }
     
     span {
+        margin-top: 2em;
         color: #C0C0C0;
         font-size: 2em;
+        display: block;
     }
     
     .description {
+        margin-top: 2.6em;
         color: #59A4D7;
     }
     
@@ -130,11 +134,19 @@
         font-stretch: condensed;
     }
     
-    .listimag {
-        border: none;
+    .listimg {
+        padding: 0;
+        border: 0.5em solid lightgray;
+        margin-bottom: 2em;
+        display: block;
+    }
+    
+    listingimg:hover {
+        border: 0.5em solid grey;
     }
     
     button {
+        margin-top: 3em;
         color: white;
         background-color: #47a3da;
         border-radius: 2px;
@@ -196,10 +208,11 @@
 
                     <li ng-repeat="item in store.items" class="col-md-12 listli">
                         <div>
-                            <img ng-src="{{item.MainImage[1].url_170x135" class="listimg col-xs-3 col-md-2">
+                            <img ng-src="{{item.MainImage[1].url_170x135}}" class="listimg col-xs-3 col-md-2">
                         </div>
                         <h3 class="col-md-3 col-xs-5 widget">{{item.title}}</h3>
                         <div class="col-md-2 col-xs-4 price">
+
                             <span>{{item.price}}</span>
                         </div>
                         <p class="col-md-2 col-sm-12 col-xs-12 description">{{item.description}}</p>
