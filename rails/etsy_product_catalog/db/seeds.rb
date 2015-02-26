@@ -1,13 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+include 'Httparty'
+
+
 etsy = Etsy.new
 trending = etsy.trending
 listings = etsy.listings
+ # shops = etsy.shops
 
 Listing.delete_all
 listings['results'].each do |listing|
@@ -31,4 +28,28 @@ listings['results'].each do |listing|
 
 	)
 
+
+
+	images = HTTParty.get('https://openapi.etsy.com/v2/listings/#{listing['listing_id']}/images?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8' )
+	Image.create()
+
+
+			shop = etsy.shop(listing['listing_id'])
+	    result=shop['results']['0']
+				Shop.create(
+					title:result['title'],
+				  etsy_user_id:result['user_id'],
+				  shop_name:result['shop_name'],
+				  listing_active_count:result['listing_active_count'],
+				  login_name:result['login_name'],
+					policy_welcome:result['policy_welcome'],
+					policy_payment:result['policy_payment'],
+					policy_shipping:result['policy_shipping'],
+					policy_refunds:result['policy_refunds'],
+					policy_additional:result['policy_additional'],
+					policy_seller_info:result['policy_seller_info'],
+				  shop_banner:result['image_url_760x100']
+				)
 end
+
+

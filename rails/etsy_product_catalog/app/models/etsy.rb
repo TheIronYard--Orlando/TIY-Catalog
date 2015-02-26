@@ -11,16 +11,22 @@ class Etsy
 
 
 	def listings(which=:active)
-		self.class.get("/listings/#{which}?limit=100&offset=250&api_key=hlq9zyrpxmcx4vb4vetw22a8")
+		self.class.get("/listings/#{which}?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8")
 	end
 
 	def trending(which=:trending)
-		self.class.get("/listings/#{which}?limit=100&offset=250&api_key=hlq9zyrpxmcx4vb4vetw22a8")
+		self.class.get("/listings/#{which}?limit=100&offset=500&api_key=hlq9zyrpxmcx4vb4vetw22a8")
 	end
 
-	def shop(which=:etsy_shop_id)
-	  self.class.get("/shops/#{which}?limit=100&offset=250&api_key=hlq9zyrpxmcx4vb4vetw22a8")
+	def shop(listing_id)
+		self.class.get("/shops/listing/#{listing_id}?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8")
 	end
+
+
+	# def images(listing_id)
+	# 	self.class.get("/listings/#{listing_id}/images?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8")
+	# end
+
 
 
 end

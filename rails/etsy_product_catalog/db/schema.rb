@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224200010) do
+ActiveRecord::Schema.define(version: 20150224215144) do
+
+  create_table "images", force: :cascade do |t|
+    t.integer  "listing_image_id"
+    t.integer  "etsy_listing_id"
+    t.integer  "rank"
+    t.string   "url_75x75"
+    t.string   "url_fullxfull"
+    t.string   "url_170x135"
+    t.integer  "full_height"
+    t.integer  "full_width"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "listings", force: :cascade do |t|
     t.string   "title"
@@ -63,6 +76,7 @@ ActiveRecord::Schema.define(version: 20150224200010) do
     t.integer  "num_favorites"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "etsy_user_id"
   end
 
   create_table "users", force: :cascade do |t|
