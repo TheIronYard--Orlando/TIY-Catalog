@@ -16,10 +16,10 @@
     "url": "https://github.com/TheIronYard--Orlando/TIY-Catalog/issues"
   },
   "homepage": "https://github.com/TheIronYard--Orlando/TIY-Catalog",
-  "dependencies": {
-    "lodash": "^3.3.1"
-  },
   "devDependencies": {
+    "lodash": "^3.3.1",
+    "mocha": "^2.1.0",
+    "chai": "^2.1.0",
     "gulp": "^3.8.11",
     "gulp-sass": "^1.3.3"
   }
