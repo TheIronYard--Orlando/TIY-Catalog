@@ -3,7 +3,7 @@ var imageCall = '&includes=MainImage';
 var data = require('./trending.json');
 var _ = require('lodash');
 var trending = data.results;
-var id = [ ];
+
 /* When calling this function, feed it a string with no spaces and the fields seperated by commas */
 function apiFields(api,data){
 	return api+data+imageCall;
@@ -36,8 +36,6 @@ function currencyCode(array){
 		console.log(array[i].currency_code);
 	}
 }
-
 productId(trending)
 
 
-console.log(id)
