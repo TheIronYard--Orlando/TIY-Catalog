@@ -50,3 +50,15 @@
     font-size: 1.5em;
     font-weight: bolder;
 }
+
+@media (max-width: 767px) {
+    .container {
+        width: 57.5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+}
