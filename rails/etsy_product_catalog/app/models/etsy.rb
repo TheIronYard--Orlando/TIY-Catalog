@@ -2,31 +2,21 @@ class Etsy
 	include HTTParty
 	base_uri 'https://openapi.etsy.com/v2/'
 
-	def initialize
 
+	def self.listings(which=:active)
+		get("/listings/#{which}?limit=100&offset=49900&api_key=#{api_key}")
 	end
 
-	# which can be :friends, :user or :public
-	# options[:query] can be things like since, since_id, count, etc.
-
-
-	def listings(which=:active)
-		self.class.get("/listings/#{which}?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8")
+	def self.trending(which=:trending)
+		get("/listings/#{which}?limit=100&offset=500&api_key=#{api_key}")
 	end
 
-	def trending(which=:trending)
-		self.class.get("/listings/#{which}?limit=100&offset=500&api_key=hlq9zyrpxmcx4vb4vetw22a8")
+	def self.shop(listing_id)
+		get("/shops/listing/#{listing_id}?limit=100&offset=49900&api_key=#{api_key}")
 	end
 
-	def shop(listing_id)
-		self.class.get("/shops/listing/#{listing_id}?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8")
-	end
-
-
-	# def images(listing_id)
-	# 	self.class.get("/listings/#{listing_id}/images?limit=100&offset=49900&api_key=hlq9zyrpxmcx4vb4vetw22a8")
-	# end
-
-
+	def self.images(listing_id)
+	 	get("/listings/#{listing_id}/images?limit=100&offset=49900&api_key=#{api_key}")
+  end
 
 end
