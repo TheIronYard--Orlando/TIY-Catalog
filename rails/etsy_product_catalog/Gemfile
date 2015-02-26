@@ -21,3 +21,7 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'figaro'
+gem 'etsy'
+gem 'oauth'
+
