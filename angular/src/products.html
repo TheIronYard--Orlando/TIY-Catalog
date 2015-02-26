@@ -119,10 +119,13 @@
     }
     
     span {
-        margin-top: 2em;
         color: #C0C0C0;
         font-size: 2em;
         display: block;
+    }
+    
+    .list-price {
+        margin-top: 2em;
     }
     
     .description {
@@ -213,7 +216,7 @@
                         <h3 class="col-md-3 col-xs-5 widget">{{item.title}}</h3>
                         <div class="col-md-2 col-xs-4 price">
 
-                            <span>{{item.price}}</span>
+                            <span class="list-price">{{item.price}}</span>
                         </div>
                         <p class="col-md-2 col-sm-12 col-xs-12 description">{{item.description}}</p>
                         <div class="col-md-3 col-sm-12 col-xs-12 ">
