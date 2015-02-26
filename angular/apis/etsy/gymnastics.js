@@ -1,13 +1,48 @@
-var APIcall = 'https://openapi.etsy.com/v2/listings/trending?api_key=q4ubii6kukovuc0hl2e8myxx&fields=';
-var imageCall = '&includes=MainImage';
 var data = require('./trending.json');
 var _ = require('lodash');
 var trending = data.results;
 
-/* When calling this function, feed it a string with no spaces and the fields seperated by commas */
-function apiFields(api,data){
-	return api+data+imageCall;
+/**
+ * These are the pieces we need to construct an API call to Etsy.
+ */
+var API = {
+	scheme: 'https',
+	host: 'openapi.etsy.com',
+	base: '/v2',
+	path: '/listings/trending.json',
+	params: {
+		api_key: 'q4ubii6kukovuc0hl2e8myxx',
+		includes: 'MainImage',
+		fields: 'id,description,title,price'
+	},
+};
+
+/**
+ * @param Object API representing pieces of a full URL
+ * @return String URL for the provided API
+ * @see http://nodejs.org/api/url.html for better ideas
+ */
+function urlFor(API){
+	// See http://lodash.com/docs#template
+	var tpl = _.template('${scheme}://${host}${base}${path}?${params}');
+
+	var params = _.map(API.params, function(value, key){
+		return key + '=' + value;
+	}).join('&');
+
+	// See http://lodash.com/docs#extend
+	return tpl(_.extend({ }, API, { params: params }));
 }
+
+// Gimme the URL for the API, as-is...
+console.log(urlFor(API));
+
+// Now gimme the `localhost` version...
+// See http://lodash.com/docs#extend
+console.log(urlFor(_.extend({ }, API, {
+  host: 'localhost',
+  base: '/apis/etsy'
+})));
 
 /* product ID in each of the trending items in the call */
 function productId(array){
@@ -37,5 +72,3 @@ function currencyCode(array){
 	}
 }
 productId(trending)
-
-
