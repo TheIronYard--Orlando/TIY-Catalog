@@ -1,6 +1,19 @@
-var data = require('./trending.json');
-var _ = require('lodash');
-var trending = data.results;
+var _ = require('lodash')
+  , assert = require('chai').assert
+
+var data = require('./trending.json')
+  , trending = transform(data);
+
+function transform(data){
+	return _.map(data.results, function(listing){
+		return {
+			id: listing.listing_id,
+			image: listing.MainImage,
+			title: listing.title,
+			description: listing.description
+		}
+	}
+}
 
 /**
  * These are the pieces we need to construct an API call to Etsy.
@@ -34,15 +47,48 @@ function urlFor(API){
 	return tpl(_.extend({ }, API, { params: params }));
 }
 
-// Gimme the URL for the API, as-is...
-console.log(urlFor(API));
+describe('the API', function(){
+	it('should have all the parts we need', function(){
+		assert.isDefined(API.scheme);
+		assert.isDefined(API.host);
+		assert.isDefined(API.base);
+		// etc . . .
+	});
 
-// Now gimme the `localhost` version...
-// See http://lodash.com/docs#extend
-console.log(urlFor(_.extend({ }, API, {
-  host: 'localhost',
-  base: '/apis/etsy'
-})));
+	it('should give me the correct default URL', function(){
+		assert.equal(
+			'https://openapi.etsy.com/v2/listings/trending.json' +
+			'?api_key=q4ubii6kukovuc0hl2e8myxx' +
+			'&includes=MainImage' +
+			'&fields=id,description,title,price',
+
+			// Gimme the URL for the API, as-is...
+			urlFor(API)
+		);
+	})
+
+	it('should give me the correct URL for localhost, too', function(){
+		assert.equal(
+			'https://localhost/apis/etsy/listings/trending.json',
+
+			// Now gimme the `localhost` version...
+			// See http://lodash.com/docs#extend
+			urlFor(_.extend({ }, API, {
+			  host: 'localhost',
+			  base: '/apis/etsy',
+			  params: { }
+			}))
+		);
+	});
+}); // describe(the API)
+
+describe('the data from the API', function(){
+	it('should have `id` fields for all entries', function(){
+		trending.map(function(product){
+			assert.isDefined(product.listing_id);
+		});
+	});
+});
 
 /* product ID in each of the trending items in the call */
 function productId(array){
@@ -71,4 +117,4 @@ function currencyCode(array){
 		console.log(array[i].currency_code);
 	}
 }
-productId(trending)
+// productId(trending)
