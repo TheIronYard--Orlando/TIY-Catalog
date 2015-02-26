@@ -8,7 +8,7 @@
         MainImage : [ 
             {url_75x75 : "{{URL}}"},
             { url_170x135 : "{{URL}}"}
-        ];
+        ]
     },
         {title : "Widget2",
         price : "$10.00",
@@ -17,7 +17,7 @@
         }];
     
     app.controller('StoreController', function(){
-        this.items = products;
+       this.items = products;
     });
     
     
