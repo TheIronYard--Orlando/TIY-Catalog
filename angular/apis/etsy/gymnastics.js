@@ -4,6 +4,15 @@ var data = require('./trending.json')
 var _ = require('lodash');
 var trending = data.results;
 
+var images = keyChecker("MainImage");
+var listing = keyChecker("listing_id");
+var description = keyChecker("description") 
+
+
+function foo(params){
+	return _.bind(API)
+}
+
 
 function keyChecker(key){
 	return _.map(trending,key)
@@ -16,8 +25,3 @@ var values = {
 	variations: keyChecker("has_variations")
 }
 
-var images = keyChecker("MainImage");
-var listing = keyChecker("listing_id");
-var description = keyChecker("description") 
-
-console.log(_.zip(listing,description,images,keyChecker("price")))
