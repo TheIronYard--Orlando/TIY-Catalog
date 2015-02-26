@@ -21,8 +21,4 @@ group :development, :test do
   gem 'spring'
 end
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 02205fa515fc8a870cb655cd05b1f29b83ddd379
+gem 'etsy'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224215144) do
+ActiveRecord::Schema.define(version: 20150226192628) do
 
   create_table "images", force: :cascade do |t|
     t.integer  "listing_image_id"
@@ -30,23 +30,15 @@ ActiveRecord::Schema.define(version: 20150224215144) do
     t.string   "title"
     t.string   "description"
     t.float    "price"
-    t.string   "images"
-    t.string   "shop_name"
     t.integer  "number_of_store_reviews"
-    t.integer  "shop_id"
-    t.string   "shipping_policy"
-    t.string   "refund_policy"
     t.boolean  "is_supply"
     t.string   "state"
-    t.integer  "user_id"
     t.integer  "category_id"
     t.float    "creation_tsz"
     t.integer  "quantity"
     t.string   "tags"
     t.string   "materials"
     t.integer  "views"
-    t.integer  "shipping_template_id"
-    t.string   "shipping"
     t.boolean  "is_customizable"
     t.integer  "etsy_listing_id"
     t.integer  "etsy_user_id"
@@ -61,7 +53,6 @@ ActiveRecord::Schema.define(version: 20150224215144) do
   create_table "shops", force: :cascade do |t|
     t.string   "shop_name"
     t.string   "title"
-    t.integer  "user_id"
     t.string   "currency_code"
     t.integer  "listing_active_count"
     t.string   "login_name"
@@ -77,6 +68,7 @@ ActiveRecord::Schema.define(version: 20150224215144) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.integer  "etsy_user_id"
+    t.integer  "etsy_shop_id"
   end
 
   create_table "users", force: :cascade do |t|
