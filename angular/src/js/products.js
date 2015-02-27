@@ -5,16 +5,22 @@
     //        //       this.items = products;
     //        var self = this;
     //        self.items = [];
+    //        this.selectTab = function (setTab) {
+    //                self.tab = setTab;
+    //            console.log(self.tab)
+    //            }
     //
+    //            this.isSelected = function (nextTab) {
+    //                return self.tab === nextTab;
+    //            }
     //
     //
     //        $http.get('js/etsy.json').success(function (data) {
-    //            
+    //
     //            self.items = data.results;
     //
     //        })
-    //        }]);
-
+    //            }]);
     app.controller('StoreController', function () {
 
         var self = this;
@@ -52,12 +58,12 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160"
-                        },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                        }
-                    ]
-                },
+                            }
+                        ]
+                    },
         {
             title: "Title2",
             price: "$10.00",
@@ -65,11 +71,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                        },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                        }]
-                },
+                            }]
+                    },
         {
             title: "Title3",
             price: "$15.00",
@@ -77,11 +83,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                        },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                        }]
-                },
+                            }]
+                    },
 
         {
             title: "Title4",
@@ -90,11 +96,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                        },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                        }]
-                },
+                            }]
+                    },
 
         {
             title: "Title5",
@@ -103,11 +109,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                        },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                        }]
-                },
+                            }]
+                    },
         {
             title: "Title6",
             price: "$30.00",
@@ -115,11 +121,9 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                        },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                        }]
-                }
-
-                ];
+                            }]
+                    }];
 })();
