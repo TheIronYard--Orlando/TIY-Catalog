@@ -196,36 +196,29 @@
         <section class="tab-content" ng-controller="StoreController as store">
             <div class="tab-pane active" id="grid">
                 <!--this div is for the grid layout-->
-                <div ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
-                    <img class="text-center" ng-src="{{item.MainImage[0].url_75x75}}">
-                    <h1>{{item.title}}</h1>
-                    <span>{{item.price}}</span>
-                    <p>{{item.description}}</p>
-                    <button>Add to cart</button>
-                </div>
-
+                <ul>
+                    <li ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                        <img class="text-center" ng-src="{{item.MainImage[0].url_75x75}}">
+                        <h1>{{item.title}}</h1>
+                        <span>{{item.price}}</span>
+                        <p>{{item.description}}</p>
+                        <span>
+                            <button><a class="cartbutton glyphicon glyphicon-plus-sign">Add to cart</a></button>
+                        </span>
+                    </li>
+                </ul>
             </div>
 
             <div class="tab-pane" id="list">
                 <ul class="product-list">
-
                     <li ng-repeat="item in store.items" class="col-md-12 listli">
-                        <div>
-                            <img ng-src="{{item.MainImage[1].url_170x135}}" class="listimg col-xs-3 col-md-2">
-                        </div>
-                        <h3 class="col-md-3 col-xs-5 widget">{{item.title}}</h3>
-                        <div class="col-md-2 col-xs-4 price">
-
-                            <span class="list-price">{{item.price}}</span>
-                        </div>
+                        <img ng-src="{{item.MainImage[1].url_170x135}}" class="listimg col-xs-2">
+                        <h1 class="col-xs-2 widget">{{item.title}}</h1>
+                        <span class="col-xs-2 list-price price">{{item.price}}</span>
                         <p class="col-md-2 col-sm-12 col-xs-12 description">{{item.description}}</p>
-                        <div class="col-md-3 col-sm-12 col-xs-12 ">
-                            <button>
-                                <a class="cartbutton glyphicon glyphicon-plus-sign">
-                                    <strong> Add to cart</strong>
-                                </a>
-                            </button>
-                        </div>
+                        <span class="col-xs-3 col-sm-12 col-md-3">
+                           <button><a class="cartbutton glyphicon glyphicon-plus-sign">Add to cart</a></button>
+                        </span>
                     </li>
                 </ul>
             </div>
