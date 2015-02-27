@@ -7,7 +7,7 @@
     //         self.items = [];
     //        
     //    
-    //        
+    //
     //       $http.get('js/etsy.json').succes(function(data) {
     //           self.items = data;
     //        
@@ -99,6 +99,5 @@
 
         ];
 
-
-
+    
 })();
