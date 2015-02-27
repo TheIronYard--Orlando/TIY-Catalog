@@ -1,0 +1,109 @@
+img {
+  border: 0.5em solid lightgray;
+  text-align: center; }
+
+img:hover {
+  border: 0.5em solid gray; }
+
+h1 {
+  color: #47a3da; }
+
+span {
+  color: #47a3da;
+  text-align: center; }
+
+p {
+  color: #47a3da; }
+
+button {
+  color: #47a3da;
+  margin-bottom: 5em; }
+
+.container {
+  border: 3px solid #47a3da;
+  Padding-top: 2em;
+  margin-top: 3em;
+  margin-bottom: 3em; }
+
+.tab-content {
+  padding-top: 2em; }
+
+.product-list {
+  list-style: none; }
+
+li {
+  display: block; }
+
+Stuff Sam Added .container {
+  border: 5px solid #47a3da; }
+
+.cartbutton {
+  font-size: 1em; }
+
+.navbar {
+  border-bottom: 3px solid #58A3D5;
+  right: 0;
+  margin-bottom: 0em;
+  padding-top: 1em;
+  width: 100%; }
+
+.navAnchors {
+  float: right;
+  font-size: 2em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  text-decoration: none !important; }
+
+.navAnchor:hover {
+  color: #CDCDCD;
+  background-color: #CDCDCD; }
+
+.navAnchor:before::hover {
+  color: #CDCDCD;
+  background-color: #CDCDCD; }
+
+h3 {
+  color: #47a3da; }
+
+.widget {
+  margin-top: 2.2em;
+  font-size: 2em;
+  color: #58A3D6; }
+
+span {
+  color: #C0C0C0;
+  font-size: 2em;
+  display: block; }
+
+.list-price {
+  margin-top: 2em; }
+
+.description {
+  margin-top: 2.6em;
+  color: #59A4D7; }
+
+strong {
+  font-stretch: condensed; }
+
+.listimg {
+  padding: 0;
+  border: 0.5em solid lightgray;
+  margin-bottom: 2em;
+  display: block; }
+
+listingimg:hover {
+  border: 0.5em solid grey; }
+
+button {
+  margin-top: 3em;
+  color: white;
+  background-color: #47a3da;
+  border-radius: 2px;
+  height: 3em;
+  padding: 1em; }
+
+button > a {
+  color: white; }
+
+.listli {
+  padding-bottom: 1em; }
