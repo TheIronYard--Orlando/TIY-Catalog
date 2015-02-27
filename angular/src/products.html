@@ -169,44 +169,33 @@
 </style>
 
 
-<body ng-app="BetterThanEtsy">
+<body ng-app="BetterThanEtsy" ng-controller="StoreController as store">
 
     <div class="container">
 
         <nav class="navbar">
-            <!--
-           <ul class="nav nav-pills col-xs-offset-8 col-sm-offset-10 col-md-offset-10" role="tablist">
-               <li role="presentation" class="active">
--->
-            <a class="navAnchors glyphicon glyphicon-th-list" href="#list" role="tab" data-toggle="tab"></a>
 
+            <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th-list"></a>
 
-            <!--
-               </li>
-               <li role="presentation">
--->
-            <a class="navAnchors glyphicon glyphicon-th" href="#grid" role="tab" data-toggle="tab"></a> <span>&nbsp;&nbsp;</span>
-            <!--
-            </li>
-</ul>
--->
+            <a ng-click="store.selectTab(2)" class="navAnchors glyphicon glyphicon-th"></a> <span>&nbsp;&nbsp;</span>
+
         </nav>
 
-        <section class="tab-content" ng-controller="StoreController as store">
-            <div class="tab-pane active" id="grid">
+        <section class="tab-content">
+            <div ng-show="store.isSelected(1)" class="tab-pane active" id="grid">
                 <!--this div is for the grid layout-->
                 <div ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
                     <img class="text-center" ng-src="{{item.MainImage[0].url_75x75}}">
                     <h1>{{item.title}}</h1>
-                    <span>{{item.price}}</span>
+                    <span>{{item.price |currency}}</span>
                     <p>{{item.description}}</p>
-                    <button>Add to cart</button>
+                    <button>Add to cart.</button>
                 </div>
 
             </div>
             <!--this div is for the grid layout-->
 
-            <div class="tab-pane" id="list">
+            <div ng-show="store.isSelected(2)" id="list">
                 <ul class="product-list">
 
                     <li ng-repeat="item in store.items" class="col-md-12 listli">
@@ -239,6 +228,11 @@
     <script src="js/plugins.js"></script>
     <script src="js/products.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type='text/javascript' id="__bs_script__">
+        //<![CDATA[
+        document.write("<script async src='//HOST:3004/browser-sync/browser-sync-client.1.9.1.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+        //]]>
+    </script>
 
 
 </body>
