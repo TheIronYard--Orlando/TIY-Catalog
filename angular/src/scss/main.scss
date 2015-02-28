@@ -1,2 +1,9 @@
 /* // One day: @include 'bootstrap' */
 
+.grid-view {
+    @extend .col-md-4;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+    @extend .text-center;
+}
+

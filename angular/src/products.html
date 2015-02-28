@@ -186,36 +186,39 @@
     }
 </style>-->
 
-<body ng-app="BetterThanEtsy">
-    <!-- chnage app name to TIY-Catalog-->
+<!-- chnage app name to TIY-Catalog-->
+
+<body ng-app="BetterThanEtsy" ng-controller="StoreController as store">
 
     <div class="container">
 
         <nav class="navbar">
-            <a class="glyphicon glyphicon-th-list" href="#list" role="tab" data-toggle="tab"></a>
-            <a class="glyphicon glyphicon-th" href="#grid" role="tab" data-toggle="tab"></a>
+            <a ng-click="store.selectTab(2)" class="glyphicon glyphicon-th-list"></a>
+            <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th"></a>
         </nav>
 
-        <section class="container-fluid tab-content" ng-controller="StoreController as store">
-            <div class="tab-pane active" id="grid">
-                <ul class="nobullets">
-                    <li ng-repeat="item in store.items" class="nobullets col-xs-12 col-sm-6 col-md-4 text-center">
-                        <img class="grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
-                        <h1>{{item.title}}</h1>
-                        <span class="price">{{item.price}}</span>
-                        <p class="grid-description">{{item.description}}</p>
-                        <div>
-                            <a class="cartbutton">
-                                <icon class="glyphicon glyphicon-plus-sign"></icon> Add to cart
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+        <section class="tab-content container-fluid">
+
+            <div ng-show="store.isSelected(1)" class="tab-pane active" id="grid">
+                <!--this div is for the grid layout-->
+                <div ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
+                    <h1>{{item.title}}</h1>
+                    <span class="price">{{item.price |currency}}</span>
+                    <p class="grid-descrition">{{item.description}}</p>
+                    <div class="list-button">
+                        <a class="cartbutton">
+                            <icon class="glyphicon glyphicon-plus-sign">
+                            </icon> Add to cart
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="tab-pane" id="list">
-                <ul class="nobullets">
-                    <li ng-repeat="item in store.items" class="nobullets col-md-12 list-li">
+            <div ng-show="store.isSelected(2)" id="list">
+                <!--this div is for the list layout-->
+                <ul class="product-list">
+                    <li ng-repeat="item in store.items" class="col-md-12 list-li">
                         <img ng-src="{{item.MainImage[1].url_170x135}}" class="list-img col-xs-3 col-sm-2">
                         <h1 class="col-xs-3 col-sm-2 list-title">{{item.title}}</h1>
                         <span class="col-xs-3 col-sm-2 list-price price">{{item.price}}</span>
@@ -238,6 +241,11 @@
     <script src="js/plugins.js"></script>
     <script src="js/products.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type='text/javascript' id="__bs_script__">
+        //<![CDATA[
+        document.write("<script async src='//HOST:3004/browser-sync/browser-sync-client.1.9.1.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+        //]]>
+    </script>
 
 
 </body>
