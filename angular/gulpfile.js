@@ -21,6 +21,8 @@
 //        stream: true
 //    }));
 //});
+//
+//gulp.task('default', ['serve']);
 
 
 // !!The below code works for $ gulp sass!!
