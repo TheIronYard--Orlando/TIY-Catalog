@@ -13,8 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
     <!--  endbower -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="scss/products.scss">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -25,13 +24,13 @@
 </head>
 
 
-< <body ng-app="BetterThanEtsy" ng-controller="StoreController as store">
+<body ng-app="BetterThanEtsy" ng-controller="StoreController as store">
 
     <div class="container">
 
         <nav class="navbar">
-            <a ng-click="store.selectTab(2)" class="glyphicon glyphicon-th-list"></a>
             <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th"></a>
+            <a ng-click="store.selectTab(2)" class="glyphicon glyphicon-th-list"></a>
         </nav>
 
         <section class="tab-content container-fluid">
@@ -85,6 +84,6 @@
     </script>
 
 
-    </body>
+</body>
 
 </html>
