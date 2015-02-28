@@ -1,20 +1,6 @@
 (function () {
     var app = angular.module("BetterThanEtsy", []);
 
-<<<<<<< HEAD
-    //    app.controller('StoreController', ['$http', function($http){
-    ////       this.items = products;
-    //         var self = this;
-    //         self.items = [];
-    //        
-    //    
-    //
-    //       $http.get('js/etsy.json').succes(function(data) {
-    //           self.items = data;
-    //        
-    //    })
-    //    } ])
-=======
     //    app.controller('StoreController', ['$http', function ($http) {
     //        //       this.items = products;
     //        var self = this;
@@ -36,7 +22,6 @@
     //        })
     //            }]);
     app.controller('StoreController', function () {
->>>>>>> carolinapowers/feature/angular/browse-html+sass
 
         var self = this;
         this.items = products;
@@ -139,15 +124,6 @@
                             },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-<<<<<<< HEAD
-                }]
-        }
-
-        ];
-
-    
-=======
                             }]
                     }];
->>>>>>> carolinapowers/feature/angular/browse-html+sass
 })();

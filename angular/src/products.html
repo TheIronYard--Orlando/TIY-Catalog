@@ -25,66 +25,46 @@
 </head>
 
 
-<body ng-app="BetterThanEtsy" ng-controller="StoreController as store">
+< <body ng-app="BetterThanEtsy" ng-controller="StoreController as store">
 
     <div class="container">
 
         <nav class="navbar">
-
-            <a ng-click="store.selectTab(2)" class="navAnchors glyphicon glyphicon-th-list"></a>
-
-            <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th"></a> <span>&nbsp;&nbsp;</span>
-
-
-            <!--Tabs with Angular-->
-            <section>
-                <ul class="nav nav-pills">
-                    <li>
-                        <a href="#grid" class="navAnchors glyphicon glyphicon-th" ng-click="tab = 1"></a>
-                    </li>
-                    <li>
-                        <a href="#list" </li>
-                </ul>
-            </section>
-
-            <!--endTabs with Angular-->
-
-
-
+            <a ng-click="store.selectTab(2)" class="glyphicon glyphicon-th-list"></a>
+            <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th"></a>
         </nav>
 
-        <section class="tab-content">
+        <section class="tab-content container-fluid">
+
             <div ng-show="store.isSelected(1)" class="tab-pane active" id="grid">
                 <!--this div is for the grid layout-->
                 <div ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
-                    <img class="text-center" ng-src="{{item.MainImage[0].url_75x75}}">
+                    <img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
                     <h1>{{item.title}}</h1>
-                    <span>{{item.price |currency}}</span>
-                    <p>{{item.description}}</p>
-                    <button>Add to cart.</button>
+                    <span class="price">{{item.price |currency}}</span>
+                    <p class="grid-descrition">{{item.description}}</p>
+                    <div class="list-button">
+                        <a class="cartbutton">
+                            <icon class="glyphicon glyphicon-plus-sign">
+                            </icon> Add to cart
+                        </a>
+                    </div>
                 </div>
-
             </div>
 
             <div ng-show="store.isSelected(2)" id="list">
+                <!--this div is for the list layout-->
                 <ul class="product-list">
-
-                    <li ng-repeat="item in store.items" class="col-md-12 listli">
-                        <div>
-                            <img ng-src="{{item.MainImage[1].url_170x135}}" class="listimg col-xs-3 col-md-2">
-                        </div>
-                        <h3 class="col-md-3 col-xs-5 widget">{{item.title}}</h3>
-                        <div class="col-md-2 col-xs-4 price">
-
-                            <span class="list-price">{{item.price}}</span>
-                        </div>
-                        <p class="col-md-2 col-sm-12 col-xs-12 description">{{item.description}}</p>
-                        <div class="col-md-3 col-sm-12 col-xs-12 ">
-                            <button>
-                                <a class="cartbutton glyphicon glyphicon-plus-sign">
-                                    <strong> Add to cart</strong>
-                                </a>
-                            </button>
+                    <li ng-repeat="item in store.items" class="col-md-12 list-li">
+                        <img ng-src="{{item.MainImage[1].url_170x135}}" class="list-img col-xs-3 col-sm-2">
+                        <h1 class="col-xs-3 col-sm-2 list-title">{{item.title}}</h1>
+                        <span class="col-xs-3 col-sm-2 list-price price">{{item.price}}</span>
+                        <p class="col-md-4 col-sm-12 col-xs-12 list-description">{{item.description}}</p>
+                        <div class="col-xs-12 col-sm-12 col-md-2 list-button">
+                            <a class="cartbutton">
+                                <icon class="glyphicon glyphicon-plus-sign">
+                                </icon> Add to cart
+                            </a>
                         </div>
                     </li>
                 </ul>
@@ -105,6 +85,6 @@
     </script>
 
 
-</body>
+    </body>
 
 </html>
