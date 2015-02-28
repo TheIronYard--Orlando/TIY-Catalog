@@ -1,0 +1,156 @@
+    ::before {
+        color: #D0D0D0;
+    }
+    
+    :hover:before {
+        color: #58A4D7;
+    }
+    /*  **Known Issue Selected Anchor tag will need to add a class to change its color**
+    :selected:before {
+        color: #58A4D7;
+    }
+*/
+    
+    .container {
+        border: 3px solid #47a3da;
+        Padding-top: 2em;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    
+    .navbar > a {
+        float: right;
+        font-size: 2em;
+        padding-bottom: 1em;
+        padding-right: 1em;
+        text-decoration: none !important;
+    }
+    
+    .glyphicon-plus-sign:before {
+        color: white;
+    }
+    
+    img {
+        border: 0.5em solid lightgray;
+        text-align: center;
+        margin-top: 4em;
+    }
+    
+    img:hover {
+        border: 0.5em solid gray;
+    }
+    
+    h1 {
+        color: #47a3da;
+    }
+    
+    span {
+        color: #47a3da;
+        text-align: center;
+    }
+    
+    p {
+        color: #47a3da;
+    }
+    
+    .nobullets {
+        list-style: none;
+    }
+    
+    li {
+        display: block;
+        position: relative;
+        /*        margin-top: 11%;*/
+    }
+    
+    .container {
+        border: 5px solid #47a3da;
+    }
+    
+    .navbar {
+        border-bottom: 3px solid #58A3D5;
+        right: 0;
+        margin-bottom: 0em;
+        padding-top: 1em;
+        width: 100%;
+    }
+    
+    .list-title {
+        margin-top: 12.5%;
+        font-size: 2em;
+        color: #58A3D6;
+    }
+    
+    .price {
+        color: #C0C0C0;
+        font-size: 2em;
+        display: block;
+    }
+    
+    .list-price {
+        margin-top: 12%;
+    }
+    
+    .list-description {
+        margin-top: 12%;
+        color: #59A4D7;
+        padding: 0;
+    }
+    
+    .grid-description {
+        margin: 1em 4em;
+    }
+    
+    .list-img {
+        padding: 0;
+        border: 0.5em solid lightgray;
+        margin-bottom: 2em;
+        display: block;
+    }
+    
+    .listing-img:hover {
+        border: 0.5em solid grey;
+    }
+    
+    .cartbutton {
+        margin-bottom: 2em;
+        color: white;
+        background-color: #47a3da;
+        border-radius: 2px;
+        height: 3em;
+        padding: 1em;
+        margin-bottom: 4em;
+        font-size: 1em;
+        display: inline-block;
+    }
+    
+    .cartbutton:hover {
+        text-decoration: none;
+        color: white;
+        background-color: darkblue;
+    }
+    
+    .list-button {
+        margin-top: 12%;
+        padding: 0;
+    }
+    
+    .list-li {
+        padding-bottom: 1em;
+        margin-top: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .list-title {
+            margin-top: 23.5%
+        }
+        .list-price {
+            margin-top: 22%;
+        }
+        .list-description {
+            margin-top: -3%;
+        }
+        .list-button {
+            margin-top: 0;
+        }
+    }
