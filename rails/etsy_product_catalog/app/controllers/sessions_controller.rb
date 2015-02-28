@@ -13,5 +13,6 @@ class SessionsController < ApplicationController
     session[:request_token],
     session[:request_secret],
     params[:oauth_verifier])
+    redirect_to Etsy.callback_url
   end
 end
