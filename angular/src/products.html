@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
 <html class="no-js">
-
+<!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
@@ -10,10 +13,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
     <!--  endbower -->
-    <link rel="stylesheet" href="scss/products.scss">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -22,7 +27,6 @@
     <!-- endbower -->
 
 </head>
-
 <style type="text/css">
     ::before {
         color: #D0D0D0;
@@ -31,11 +35,11 @@
     :hover:before {
         color: #58A4D7;
     }
-    /**Known Issue Selected Anchor tag will need to add a class to change its color**/
-    
+    /*  **Known Issue Selected Anchor tag will need to add a class to change its color**
     :selected:before {
         color: #58A4D7;
     }
+*/
     
     .container {
         border: 3px solid #47a3da;
