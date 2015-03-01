@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
     <!--  endbower -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="scss/products.scss">
-    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -28,46 +27,10 @@
     <!-- endbower -->
 
 </head>
-
 <style type="text/css">
-    ::before {
-        color: #D0D0D0;
-    }
-    
-    :hover:before {
-        color: #58A4D7;
-    }
-    /*  **Known Issue Selected Anchor tag will need to add a class to change its color**
-    :selected:before {
-        color: #58A4D7;
-    }
-*/
-    
-    .container {
-        border: 3px solid #47a3da;
-        Padding-top: 2em;
-        margin-top: 3em;
-        margin-bottom: 3em;
-    }
-    
-    .navbar > a {
-        float: right;
-        font-size: 2em;
-        padding-bottom: 1em;
-        padding-right: 1em;
-        text-decoration: none !important;
-    }
-    
-    .glyphicon-plus-sign:before {
-        color: white;
-    }
-    
-    }
-    
     img {
         border: 0.5em solid lightgray;
         text-align: center;
-        margin-top: 4em;
     }
     
     img:hover {
@@ -87,17 +50,36 @@
         color: #47a3da;
     }
     
-    .nobullets {
+    button {
+        color: #47a3da;
+        margin-bottom: 5em;
+    }
+    
+    .container {
+        border: 3px solid #47a3da;
+        Padding-top: 2em;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    
+    .tab-content {
+        padding-top: 2em;
+    }
+    
+    .product-list {
         list-style: none;
     }
     
     li {
         display: block;
-        position: relative;
     }
     
-    .container {
+    <!-- Stuff Sam Added --> .container {
         border: 5px solid #47a3da;
+    }
+    
+    .cartbutton {
+        font-size: 1em;
     }
     
     .navbar {
@@ -108,130 +90,129 @@
         width: 100%;
     }
     
-    .list-title {
-        margin-top: 12.5%;
+    .navAnchors {
+        float: right;
+        font-size: 2em;
+        padding-bottom: 1em;
+        padding-right: 1em;
+        text-decoration: none !important;
+    }
+    
+    .navAnchor:hover {
+        color: #CDCDCD;
+        background-color: #CDCDCD;
+    }
+    
+    .navAnchor:before::hover {
+        color: #CDCDCD;
+        background-color: #CDCDCD;
+    }
+    
+    h3 {
+        color: #47a3da;
+    }
+    
+    .widget {
+        margin-top: 2.2em;
         font-size: 2em;
         color: #58A3D6;
     }
     
-    .price {
+    span {
         color: #C0C0C0;
         font-size: 2em;
         display: block;
     }
     
     .list-price {
-        margin-top: 12%;
+        margin-top: 2em;
     }
     
-    .list-description {
-        margin-top: 12%;
+    .description {
+        margin-top: 2.6em;
         color: #59A4D7;
-        padding: 0;
     }
     
-    .grid-description {
-        margin: 1em 4em;
+    strong {
+        font-stretch: condensed;
     }
     
-    .list-img {
+    .listimg {
         padding: 0;
         border: 0.5em solid lightgray;
         margin-bottom: 2em;
         display: block;
     }
     
-    .listing-img:hover {
+    listingimg:hover {
         border: 0.5em solid grey;
     }
     
-    .cartbutton {
-        margin-bottom: 2em;
+    button {
+        margin-top: 3em;
         color: white;
         background-color: #47a3da;
         border-radius: 2px;
         height: 3em;
         padding: 1em;
-        margin-bottom: 4em;
-        font-size: 1em;
-        display: inline-block;
     }
     
-    .cartbutton:hover {
-        text-decoration: none;
+    button:hover {}
+    
+    button > a {
         color: white;
-        background-color: darkblue;
     }
     
-    .list-button {
-        margin-top: 12%;
-        padding: 0;
-    }
-    
-    .list-li {
+    .listli {
         padding-bottom: 1em;
-        margin-top: 0;
-    }
-    
-    @media (max-width: 991px) {
-        .list-title {
-            margin-top: 23.5%
-        }
-        .list-price {
-            margin-top: 22%;
-        }
-        .list-description {
-            margin-top: -3%;
-        }
-        .list-button {
-            margin-top: 0;
-        }
     }
 </style>
--->
 
-<!-- chnage app name to TIY-Catalog-->
 
 <body ng-app="BetterThanEtsy" ng-controller="StoreController as store">
 
     <div class="container">
 
         <nav class="navbar">
-            <a ng-click="store.selectTab(2)" class="glyphicon glyphicon-th-list"></a>
-            <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th"></a>
+
+            <a ng-click="store.selectTab(2)" class="navAnchors glyphicon glyphicon-th-list"></a>
+
+            <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th"></a> <span>&nbsp;&nbsp;</span>
+
         </nav>
 
-        <section class="tab-content container-fluid">
-
+        <section class="tab-content">
             <div ng-show="store.isSelected(1)" class="tab-pane active" id="grid">
                 <!--this div is for the grid layout-->
                 <div ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
-                    <img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
+                    <img class="text-center" ng-src="{{item.MainImage[0].url_75x75}}">
                     <h1>{{item.title}}</h1>
-                    <span class="price">{{item.price |currency}}</span>
-                    <p class="grid-descrition">{{item.description}}</p>
-                    <div class="list-button">
-                        <a class="cartbutton">
-                            <icon class="glyphicon glyphicon-plus-sign">
-                            </icon> Add to cart
-                        </a>
-                    </div>
+                    <span>{{item.price |currency}}</span>
+                    <p>{{item.description}}</p>
+                    <button>Add to cart.</button>
                 </div>
+
             </div>
 
             <div ng-show="store.isSelected(2)" id="list">
-                <!--this div is for the list layout-->
                 <ul class="product-list">
-                    <li ng-repeat="item in store.items" class="col-md-12 list-li">
-                        <img ng-src="{{item.MainImage[1].url_170x135}}" class="list-img col-xs-3 col-sm-2">
-                        <h1 class="col-xs-3 col-sm-2 list-title">{{item.title}}</h1>
-                        <span class="col-xs-3 col-sm-2 list-price price">{{item.price}}</span>
-                        <p class="col-md-4 col-sm-12 col-xs-12 list-description">{{item.description}}</p>
-                        <div class="col-xs-12 col-sm-12 col-md-2 list-button">
-                            <a class="cartbutton">
-                                <icon class="glyphicon glyphicon-plus-sign">
-                                </icon> Add to cart
-                            </a>
+
+                    <li ng-repeat="item in store.items" class="col-md-12 listli">
+                        <div>
+                            <img ng-src="{{item.MainImage[1].url_170x135}}" class="listimg col-xs-3 col-md-2">
+                        </div>
+                        <h3 class="col-md-3 col-xs-5 widget">{{item.title}}</h3>
+                        <div class="col-md-2 col-xs-4 price">
+
+                            <span class="list-price">{{item.price}}</span>
+                        </div>
+                        <p class="col-md-2 col-sm-12 col-xs-12 description">{{item.description}}</p>
+                        <div class="col-md-3 col-sm-12 col-xs-12 ">
+                            <button>
+                                <a class="cartbutton glyphicon glyphicon-plus-sign">
+                                    <strong> Add to cart</strong>
+                                </a>
+                            </button>
                         </div>
                     </li>
                 </ul>

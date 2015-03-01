@@ -28,7 +28,11 @@
     <!-- endbower -->
 
 </head>
+<<<<<<< HEAD
 
+=======
+<!--
+>>>>>>> 9a5bb192782fc54ea490ab302aa02f596fa2799b
 <style type="text/css">
     ::before {
         color: #D0D0D0;
@@ -43,6 +47,10 @@
     }
 */
     
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> 9a5bb192782fc54ea490ab302aa02f596fa2799b
     .container {
         border: 3px solid #47a3da;
         Padding-top: 2em;
@@ -50,6 +58,10 @@
         margin-bottom: 3em;
     }
     
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> 9a5bb192782fc54ea490ab302aa02f596fa2799b
     .navbar > a {
         float: right;
         font-size: 2em;
@@ -60,8 +72,6 @@
     
     .glyphicon-plus-sign:before {
         color: white;
-    }
-    
     }
     
     img {
@@ -161,6 +171,7 @@
         text-decoration: none;
         color: white;
         background-color: darkblue;
+<<<<<<< HEAD
     }
     
     .list-button {
@@ -168,6 +179,15 @@
         padding: 0;
     }
     
+=======
+    }
+    
+    .list-button {
+        margin-top: 12%;
+        padding: 0;
+    }
+    
+>>>>>>> 9a5bb192782fc54ea490ab302aa02f596fa2799b
     .list-li {
         padding-bottom: 1em;
         margin-top: 0;
