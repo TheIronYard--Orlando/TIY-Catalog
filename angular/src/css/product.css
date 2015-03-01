@@ -1,73 +1,55 @@
-.product-wrapper{
-    color: cornflowerblue;
-}
+.product-wrapper {
+  color: cornflowerblue; }
+
 .product-detail > img {
-    padding: 2em;
-    border: solid cornflowerblue 4px;
-}
+  padding: 2em;
+  border: solid cornflowerblue 4px; }
+
 /******
     Changing the position to relative on all product divs for the top right button
     We can totally take this out if it breaks too much stuff
 *******/
 .product-detail {
-    position: relative;
-    border-radius: 0;
-}
+  position: relative;
+  border-radius: 0; }
 
 .product-select {
-    width: 100%;
-    display: inline;
-}
+  width: 100%;
+  display: inline; }
+
 .product-select > .btn {
-    width: 20%;
-    margin-top: -0.8ex;
-    border-radius: 0;
-    border-right: solid cornflowerblue 2px;
-    border-left: solid cornflowerblue 2px;
-    border-top: solid cornflowerblue 4px;
-    border-bottom: solid cornflowerblue 4px;
-}
+  width: 20%;
+  margin-top: -0.8ex;
+  border-radius: 0;
+  border-right: solid cornflowerblue 2px;
+  border-left: solid cornflowerblue 2px;
+  border-top: solid cornflowerblue 4px;
+  border-bottom: solid cornflowerblue 4px; }
 
 .btn > span {
-    font-size: 2em;
-    color: cornflowerblue;
-}
-/*
-.product-select > .btn:first-child {
-    border-left: solid cornflowerblue 4px;
-}
-.product-select > .btn:last-child {
-    border-right: solid cornflowerblue 4px;
-}
-*/
+  font-size: 2em;
+  color: cornflowerblue; }
 
 .product-name {
-    display: block;
-    float: left;
-    margin: 0.5ex 0;
-    font-weight: 400;
-}
+  display: block;
+  float: left;
+  margin: 0.5ex 0;
+  font-weight: 400; }
 
 .price {
-    text-align: right;
-    display: block;
-    line-height: 3.5ex;
-    font-size: 1.5em;
-    font-weight: bolder;
-}
+  text-align: right;
+  display: block;
+  line-height: 3.5ex;
+  font-size: 1.5em;
+  font-weight: bolder; }
 
 /****************
 * Media Queries
 ****************/
-
 @media (max-width: 767px) {
-    .container {
-        width: 57.5%;
-    }
-}
+  .container {
+    width: 57.5%; } }
 
 @media (max-width: 480px) {
-    .container {
-        width: 90%;
-    }
-}
+  .container {
+    width: 90%; } }
