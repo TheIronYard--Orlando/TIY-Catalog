@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 
+
   def verify
     request_token = Etsy.request_token
     session[:request_token]  = request_token.token
