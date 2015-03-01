@@ -1,26 +1,7 @@
 (function () {
     var app = angular.module("BetterThanEtsy", []);
 
-    //    app.controller('StoreController', ['$http', function ($http) {
-    //        //       this.items = products;
-    //        var self = this;
-    //        self.items = [];
-    //        this.selectTab = function (setTab) {
-    //                self.tab = setTab;
-    //            console.log(self.tab)
-    //            }
-    //
-    //            this.isSelected = function (nextTab) {
-    //                return self.tab === nextTab;
-    //            }
-    //
-    //
-    //        $http.get('js/etsy.json').success(function (data) {
-    //
-    //            self.items = data.results;
-    //
-    //        })
-    //            }]);
+
     app.controller('StoreController', function () {
 
         var self = this;
@@ -38,17 +19,6 @@
         }
     });
 
-
-    //        app.controller('TabController', function () {
-    //                this.tab = 1;
-    //                this.selectTab = function (setTab) {
-    //                    this.tab = setTab;
-    //                }
-    //
-    //                this.isSelected = 1;
-    //            }
-    //
-    //        });
 
     var products = [
         {
