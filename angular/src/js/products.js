@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module("BetterThanEtsy", []);
+    var app = angular.module("TiyCatalog", []);
 
 
     app.controller('StoreController', function () {
