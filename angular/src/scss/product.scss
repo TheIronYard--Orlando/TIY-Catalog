@@ -1,17 +1,20 @@
+$main: cornflowerblue;
+
+
+
 .product-wrapper{
-    color: cornflowerblue;
+    color: $main;
 }
 .product-detail > img {
     padding: 2em;
-    border: solid cornflowerblue 4px;
+    border: solid $main 4px;
 }
 /******
     Changing the position to relative on all product divs for the top right button
     We can totally take this out if it breaks too much stuff
 *******/
 .product-detail {
-    position: relative;
-    border-radius: 0;
+	position: relative;
 }
 
 .product-select {
@@ -22,15 +25,15 @@
     width: 20%;
     margin-top: -0.8ex;
     border-radius: 0;
-    border-right: solid cornflowerblue 2px;
-    border-left: solid cornflowerblue 2px;
-    border-top: solid cornflowerblue 4px;
-    border-bottom: solid cornflowerblue 4px;
+    border-right: solid $main 2px;
+    border-left: solid $main 2px;
+    border-top: solid $main 4px;
+    border-bottom: solid $main 4px;
 }
 
 .btn > span {
     font-size: 2em;
-    color: cornflowerblue;
+    color: $main;
 }
 
 .product-name {

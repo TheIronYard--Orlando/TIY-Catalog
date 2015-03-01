@@ -18,10 +18,17 @@
   "homepage": "https://github.com/TheIronYard--Orlando/TIY-Catalog",
   "devDependencies": {
     "gulp": "^3.8.11",
+    "gulp-bower": "0.0.10",
+    "gulp-notify": "^2.2.0",
+    "gulp-ruby-sass": "^1.0.0-alpha.3",
     "gulp-sass": "^1.3.3"
   },
   "dependencies": {
+<<<<<<< HEAD
     "gulp": "^3.8.11",
     "gulp-sass": "^1.3.3"
+=======
+    "bootstrap-sass": "^3.3.3"
+>>>>>>> b6eeb371b3c2f006ffc15362264ffed75f6769b0
   }
 }

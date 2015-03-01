@@ -15,7 +15,8 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" 
+	href="../bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <link rel='stylesheet' href='css/product.css' />
@@ -25,7 +26,8 @@
 
     <div ng-controller="ProductController as prod" class='product-wrapper container'>
         <div class="row">
-            <div ng-repeat="t in prod.prodArray" class='col-md-4 col-sm-6 product-detail'>
+            <div ng-repeat="t in prod.prodArray" 
+					class='product-detail col-md-4 col-sm-6'>
                 <img class='img-responsive' src="http://lorempixel.com/output/nature-q-c-350-350-5.jpg" alt='alt for image'>
                 <nav class="button-nav">
                     <div class='btn-group dropup product-select'>
