@@ -1,11 +1,23 @@
 (function () {
-    var app = angular.module("TiyCatalog", []);
+    var app = angular.module("tiy-catalog", []);
 
 
     app.controller('StoreController', function () {
 
         var self = this;
+
         this.items = products;
+
+        var view = 'grid';
+
+        this.getView = function(){
+            return view;
+        }
+
+        this.setView = function(switchTo){
+            // if ( switchTo is 'grid' or 'list' )
+            view = switchTo;
+        }
 
         this.tab = 1;
 
@@ -23,7 +35,7 @@
     var products = [
         {
             title: "Title1",
-            price: "$5.00",
+            price: 5,
             description: "This is the most spectacular description of all time. Dont you think?",
             MainImage: [
                 {
