@@ -5,7 +5,12 @@ var browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/*.scss')
-        .pipe(sass())
+        .pipe(sass({
+          includePaths: [
+            'bower_components/bootstrap-sass/assets/stylesheets/'
+          ],
+          onError: console.error.bind(console, 'Sass error:')
+        }))
         .pipe(gulp.dest('src/css'));
 });
 
