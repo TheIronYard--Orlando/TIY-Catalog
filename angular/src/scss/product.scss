@@ -16,6 +16,9 @@ $main: cornflowerblue;
 }
 
 .product-select {
+    @extend .btn-group;
+    @extend .dropup;
+    
     width: 100%;
     display: inline;
 }
