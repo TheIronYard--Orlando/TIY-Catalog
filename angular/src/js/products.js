@@ -1,24 +1,24 @@
 (function () {
-    var app = angular.module("BetterThanEtsy", []);
-
-    //    app.controller('StoreController', ['$http', function($http){
-    ////       this.items = products;
-    //         var self = this;
-    //         self.items = [];
-    //        
-    //    
-    //        
-    //       $http.get('js/etsy.json').succes(function(data) {
-    //           self.items = data;
-    //        
-    //    })
-    //    } ])
-
+    var app = angular.module("TiyCatalog", []);
 
 
     app.controller('StoreController', function () {
+
+        var self = this;
         this.items = products;
+
+        this.tab = 1;
+
+        this.selectTab = function (setTab) {
+            self.tab = setTab;
+            console.log(self.tab)
+        }
+
+        this.isSelected = function (nextTab) {
+            return self.tab === nextTab;
+        }
     });
+
 
     var products = [
         {
@@ -28,12 +28,12 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160"
-                },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                }
-            ]
-        },
+                            }
+                        ]
+                    },
         {
             title: "Title2",
             price: "$10.00",
@@ -41,11 +41,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                }]
-        },
+                            }]
+                    },
         {
             title: "Title3",
             price: "$15.00",
@@ -53,11 +53,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                }]
-        },
+                            }]
+                    },
 
         {
             title: "Title4",
@@ -66,11 +66,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                }]
-        },
+                            }]
+                    },
 
         {
             title: "Title5",
@@ -79,11 +79,11 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                }]
-        },
+                            }]
+                    },
         {
             title: "Title6",
             price: "$30.00",
@@ -91,14 +91,9 @@
             MainImage: [
                 {
                     url_75x75: "http://lorempixel.com/160/160",
-                },
+                            },
                 {
                     url_170x135: "http://lorempixel.com/160/160"
-                }]
-        }
-
-        ];
-
-
-
+                            }]
+                    }];
 })();
