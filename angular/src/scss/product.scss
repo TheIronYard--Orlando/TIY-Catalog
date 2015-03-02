@@ -23,7 +23,11 @@ $main: cornflowerblue;
     display: inline;
 }
 
-.product-select > .btn {
+.info-button  {
+    @extend .btn;
+    @extend .btn-default;
+    @extend .dropdown-toggle;
+    
     width: 20%;
     margin-top: -0.8ex;
     border-radius: 0;
