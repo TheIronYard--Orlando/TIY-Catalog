@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
 
-
   def verify
     request_token = Etsy.request_token
     session[:request_token]  = request_token.token
@@ -13,6 +12,14 @@ class SessionsController < ApplicationController
     session[:request_token],
     session[:request_secret],
     params[:oauth_verifier])
-    redirect_to Etsy.callback_url
+    user = User.create(oauth_token: (params[:oauth_token]), 
+                       oauth_verifier: (params[:oauth_verifier]))
+    @current_user = User.where(oauth_verifier: [:oauth_verifier]).first
+      if @current_user && @current_user.authenticate(:oauth_token)
+        session[:user_id] = new_user.id
+        redirect_to Etsy.callback_url
+      end
   end
+  
 end
+
