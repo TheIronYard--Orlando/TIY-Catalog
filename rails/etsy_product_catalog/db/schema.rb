@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226192628) do
+ActiveRecord::Schema.define(version: 20150301231957) do
+
+  create_table "categories", force: :cascade do |t|
+    t.integer  "etsy_category_id"
+    t.string   "name"
+    t.string   "category_name"
+    t.string   "short_name"
+    t.string   "long_name"
+    t.integer  "num_children"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "images", force: :cascade do |t|
     t.integer  "listing_image_id"

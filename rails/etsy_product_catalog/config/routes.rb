@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   get 'authorize' => 'sessions#authorize'
   get 'verify' => 'sessions#verify'
 
+  resources :categories do
+  resources :listings
+  end
+
 end

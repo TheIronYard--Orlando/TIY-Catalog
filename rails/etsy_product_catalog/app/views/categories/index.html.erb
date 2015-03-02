@@ -1,0 +1,8 @@
+<h1>Etsy Categories</h1>
+
+  <% @categories.each do |category| %>
+  
+    <ul>
+      <li><%= link_to cat_name.sub("_", " ").splitmap(&capitalize) category_path(category.id) %></li>
+     </ul> 
+  <% end %>
