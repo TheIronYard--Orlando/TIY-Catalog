@@ -1,3 +1,5 @@
+@import 'bootstrap';
+
 ::before {
   color: #D0D0D0; }
 
@@ -11,9 +13,29 @@
 */
 .container {
   border: 3px solid #47a3da;
-  Padding-top: 2em;
+  padding-top: 2em;
   margin-top: 3em;
-  margin-bottom: 3em; }
+  margin-bottom: 3em;
+}
+
+.listings {
+    @extend .tab-pane;
+    @extend .active;
+}
+.listings.grid {
+    .listing {
+        @extend .col-sm-6;
+        @extend .col-md-4;
+        @extend .text-center;
+
+    }
+}
+.listings.list {
+    .listing {
+        /* What goes here? */
+    }
+}
+
 
 .navbar > a {
   float: right;

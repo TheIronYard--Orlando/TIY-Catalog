@@ -32,20 +32,20 @@
 
 
 
-<body ng-app="TiyCatalog" ng-controller="StoreController as store">
+<body ng-app="tiy-catalog" ng-controller="StoreController as store">
 
     <div class="container">
 
         <nav class="navbar">
-            <a ng-click="store.selectTab(2)" class="glyphicon glyphicon-th-list"></a>
-            <a ng-click="store.selectTab(1)" class="navAnchors glyphicon glyphicon-th"></a>
+            <a ng-click="store.setView('list')" class="glyphicon glyphicon-th-list"></a>
+            <a ng-click="store.setView('grid')" class="navAnchors glyphicon glyphicon-th"></a>
         </nav>
 
         <section class="tab-content container-fluid">
 
-            <div ng-show="store.isSelected(1)" class="tab-pane active" id="grid">
-                <!--this div is for the grid layout-->
-                <div ng-repeat="item in store.items" class="col-xs-12 col-sm-6 col-md-4 text-center">
+            <div ng-show="store.isSelected(1)" class="listings"
+                ng-class="store.getView()">
+                <div ng-repeat="item in store.items" class="listing">
                     <img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
                     <h1>{{item.title}}</h1>
                     <span class="price">{{item.price}}</span>
@@ -59,8 +59,8 @@
                 </div>
             </div>
 
+            <!-- // Commented for now...
             <div ng-show="store.isSelected(2)" id="list">
-                <!--this div is for the list layout-->
                 <ul class="product-list">
                     <li ng-repeat="item in store.items" class="col-md-12 list-li">
                         <img ng-src="{{item.MainImage[1].url_170x135}}" class="list-img col-xs-3 col-sm-2">
@@ -76,6 +76,7 @@
                     </li>
                 </ul>
             </div>
+            // -->
         </section>
     </div>
 
