@@ -35,11 +35,11 @@ $main: cornflowerblue;
     border-left: solid $main 2px;
     border-top: solid $main 4px;
     border-bottom: solid $main 4px;
-}
-
-.btn > span {
-    font-size: 2em;
-    color: $main;
+    
+    span {
+        font-size: 2em;
+        color: $main;
+    }
 }
 
 .product-name {

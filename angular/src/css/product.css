@@ -4909,10 +4909,9 @@ button.close {
   border-left: solid cornflowerblue 2px;
   border-top: solid cornflowerblue 4px;
   border-bottom: solid cornflowerblue 4px; }
-
-.btn > span, .info-button > span {
-  font-size: 2em;
-  color: cornflowerblue; }
+  .info-button span {
+    font-size: 2em;
+    color: cornflowerblue; }
 
 .product-name {
   display: block;
