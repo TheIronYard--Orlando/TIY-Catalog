@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/TheIronYard--Orlando/TIY-Catalog",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.3",
     "browser-sync": "^2.2.1",
     "gulp": "^3.8.11",
     "gulp-sass": "^1.3.3"
