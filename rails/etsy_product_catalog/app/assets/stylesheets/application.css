@@ -33,7 +33,7 @@
   margin-bottom: 30px;
 }
 h2 {
-  padding: 15px;
+  padding: 100px 15px 15px 15px;
 }
 h3 {
   padding: 20px;
@@ -59,8 +59,8 @@ a:hover {
   color: #666;
 }
 .back_button {
-  padding: 10px;
-  margin: 0 0 0 10px;
+  padding: 2.5px 2.5px;
+  margin: 0 0 40px 10px;
   background-color: cadetblue;
   border-radius: 3px;
   color: white;
@@ -88,6 +88,7 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  padding-top: 100px; 
 }
 .display {
   width: 25%;
@@ -109,6 +110,8 @@ a:hover {
 .nav_bar {
   display: inline-block;
   width: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
 
