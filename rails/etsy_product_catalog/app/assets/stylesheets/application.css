@@ -14,10 +14,12 @@
  *= require_self
  */
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic);
+
 * {
   padding: 0;
   margin: 0;
 }
+
  body {
   font-family: 'Merriweather', serif;
  }
@@ -32,19 +34,24 @@
   box-shadow:         1px 1px 3px 4px #ccc;
   margin-bottom: 30px;
 }
+
 h2 {
   padding: 100px 15px 15px 15px;
 }
+
 h3 {
   padding: 20px;
 }
+
 p {
   padding: 20px;
 }
+
 li {
   list-style: none;
   padding: 15px;
 }
+
 a, .back_button {
   color: #2980b9;
   text-decoration:none;
@@ -54,10 +61,24 @@ a, .back_button {
   -moz-transition:ease .4s;
   -o-transition:ease .4s;
 }
+
+.signup {
+  float: right;
+  color: white;
+  font-size: 1em;
+  padding-right: 30px; 
+}
+
+.signup:hover {
+  color: white;
+  opacity: .7;
+}
+
 a:hover {
   text-decoration: none;
   color: #666;
 }
+
 .back_button {
   padding: 2.5px 2.5px;
   margin: 0 0 40px 10px;
@@ -66,11 +87,13 @@ a:hover {
   color: white;
   font-size: 1.2em;
 }
+
 .back_button:hover {
   text-decoration:none;
   background-color: darkcyan;
   color: #ecf0f1;
 }
+
 .to_the_right {
   text-align: right;
   padding-right: 40px;
