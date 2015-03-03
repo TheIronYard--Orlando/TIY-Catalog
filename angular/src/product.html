@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>el product</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- bower:css -->
+    <link rel="stylesheet" 
+	href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel='stylesheet' href='css/product.css' />
+</head>
+
+<body ng-app="elproduct">
+
+    <div ng-controller="ProductController as prod" class='product-wrapper container'>
+        <div class="row">
+            <div ng-repeat="t in prod.prodArray" 
+					class='product-detail'>
+                <img class='img-responsive' src="http://lorempixel.com/output/nature-q-c-350-350-5.jpg" alt='alt for image'>
+                <nav class="button-nav">
+                    <div class='product-select'>
+                        <button id="a" class='info-button' data-toggle='dropdown' aria-expanded='false'>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="">Small</a>
+                            </li>
+                            <li><a href="#">Medium</a>
+                            </li>
+                            <li><a href="#">Large</a>
+                            </li>
+                            <li><a href="#">X-Large</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of a button -->
+                    <div class='product-select'>
+                        <button id="b" class='info-button' data-toggle='dropdown' aria-expanded='false'>
+                            <span class="glyphicon glyphicon-th-large"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="">Something else</a>
+                            </li>
+                            <li><a href="#">Medium</a>
+                            </li>
+                            <li><a href="#">Large</a>
+                            </li>
+                            <li><a href="#">X-Large</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of a button -->
+                    <div class='product-select'>
+                        <button id="c" class='info-button' data-toggle='dropdown' aria-expanded='false'>
+                            <span class="glyphicon glyphicon-tint"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="">Small</a>
+                            </li>
+                            <li><a href="#">Medium</a>
+                            </li>
+                            <li><a href="#">Large</a>
+                            </li>
+                            <li><a href="#">X-Large</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of a button -->
+                    <div class='product-select'>
+                        <button id="d" class='info-button' data-toggle='dropdown' aria-expanded='false'>
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="">Small</a>
+                            </li>
+                            <li><a href="#">Medium</a>
+                            </li>
+                            <li><a href="#">Large</a>
+                            </li>
+                            <li><a href="#">X-Large</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of a button -->
+                    <div class='product-select'>
+                        <button id="e" class='info-button' data-toggle='dropdown' aria-expanded='false'>
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="">Small</a>
+                            </li>
+                            <li><a href="#">Medium</a>
+                            </li>
+                            <li><a href="#">Large</a>
+                            </li>
+                            <li><a href="#">X-Large</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of a button -->
+                </nav>
+                <!-- buttons below product -->
+                <h3 class="product-name">{{"Product Name"}}</h3>
+                <span class="price">{{"99.99" | currency }}</span>
+            </div>
+            <!--entire product square -->
+
+        </div>
+    </div>
+    <!--product container called product-wrapper -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <script src="js/plugins.js"></script>
+    <script src="js/product.js"></script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+</body>
+
+</html>

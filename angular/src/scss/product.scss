@@ -1,0 +1,73 @@
+@import 'bootstrap';
+$main: cornflowerblue;
+.product-wrapper {
+    color: $main;
+}
+
+.product-detail > img {
+    padding: 2em;
+    border: solid $main 4px;
+}
+
+.product-detail {
+    @extend .col-md-4;
+    @extend .col-sm-6;
+    position: relative;
+}
+
+.product-select {
+    @extend .btn-group;
+    @extend .dropup;
+    
+    width: 100%;
+    display: inline;
+}
+
+.info-button  {
+    @extend .btn;
+    @extend .btn-default;
+    @extend .dropdown-toggle;
+    
+    width: 20%;
+    margin-top: -0.8ex;
+    border-radius: 0;
+    border-right: solid $main 2px;
+    border-left: solid $main 2px;
+    border-top: solid $main 4px;
+    border-bottom: solid $main 4px;
+    
+    span {
+        font-size: 2em;
+        color: $main;
+    }
+}
+
+.product-name {
+    display: block;
+    float: left;
+    margin: 0.5ex 0;
+    font-weight: 400;
+}
+
+.price {
+    text-align: right;
+    display: block;
+    line-height: 3.5ex;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+/****************
+* Media Queries
+****************/
+
+@media (max-width: 767px) {
+    .container {
+        width: 57.5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+}
