@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303192026) do
+ActiveRecord::Schema.define(version: 20150303214526) do
 
   create_table "images", force: :cascade do |t|
     t.integer  "listing_image_id"
@@ -72,12 +72,8 @@ ActiveRecord::Schema.define(version: 20150303192026) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "listing"
-    t.string   "shop"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.string   "oauth_verifier"
-    t.string   "oauth_token"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "login_name"
     t.integer  "etsy_user_id"
     t.string   "username"
