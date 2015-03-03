@@ -1,120 +1,110 @@
-var _ = require('lodash')
-  , assert = require('chai').assert
+var expect = require('chai').expect;
+var assert = require('chai').assert;
+var _ = require('lodash');
+var url = require('url');
 
-var data = require('./trending.json')
-  , trending = transform(data);
+var data = require('./trending.json');
 
-function transform(data){
-	return _.map(data.results, function(listing){
-		return {
-			id: listing.listing_id,
-			image: listing.MainImage,
-			title: listing.title,
-			description: listing.description
-		}
-	}
-}
-
-/**
- * These are the pieces we need to construct an API call to Etsy.
- */
 var API = {
-	scheme: 'https',
-	host: 'openapi.etsy.com',
-	base: '/v2',
-	path: '/listings/trending.json',
-	params: {
-		api_key: 'q4ubii6kukovuc0hl2e8myxx',
-		includes: 'MainImage',
-		fields: 'id,description,title,price'
-	},
+    'protocol': 'https',
+    'host': 'openapi.etsy.com',
+    'base': 'v2',
+    'path': 'listings/trending.json',
+    // Only use with JSONP...
+    // 'pathname': '/v2/listings/trending.js',
+    'query': {
+        // Only use with JSONP...
+        // 'callback': 'JSON_CALLBACK',
+        /**
+         * @param Number limit number of entries to return
+         * @param Number offset number of entries to skip
+         */
+        'limit': 50, 'offset': 0,
+        'api_key': 'q4ubii6kukovuc0hl2e8myxx',
+        'fields': 'title,description,price,currency_code',
+        'includes': 'MainImage'
+    },
 };
 
-/**
- * @param Object API representing pieces of a full URL
- * @return String URL for the provided API
- * @see http://nodejs.org/api/url.html for better ideas
- */
-function urlFor(API){
-	// See http://lodash.com/docs#template
-	var tpl = _.template('${scheme}://${host}${base}${path}?${params}');
+function urlForAPI(){
 
-	var params = _.map(API.params, function(value, key){
-		return key + '=' + value;
-	}).join('&');
-
-	// See http://lodash.com/docs#extend
-	return tpl(_.extend({ }, API, { params: params }));
+    return url.format(_.extend({ }, API, {
+        'pathname': API.base + '/' + API.path
+    }));
 }
 
-describe('the API', function(){
-	it('should have all the parts we need', function(){
-		assert.isDefined(API.scheme);
-		assert.isDefined(API.host);
-		assert.isDefined(API.base);
-		// etc . . .
-	});
+/**
+ * @param Object data from the Etsy API (raw)
+ * @returns Object
+ */
+function transform(data) {
+    return _.map(data.results, function(object) {
+        return {
+            title: object.title,
+            description: object.description,
+            price: object.price,
+            images: {
+            	full: object.MainImage.url_fullxfull,
+            	small: object.MainImage.url_170x135
+            }
+        }
+    })
+}
 
-	it('should give me the correct default URL', function(){
-		assert.equal(
-			'https://openapi.etsy.com/v2/listings/trending.json' +
-			'?api_key=q4ubii6kukovuc0hl2e8myxx' +
-			'&includes=MainImage' +
-			'&fields=id,description,title,price',
-
-			// Gimme the URL for the API, as-is...
-			urlFor(API)
-		);
-	})
-
-	it('should give me the correct URL for localhost, too', function(){
-		assert.equal(
-			'https://localhost/apis/etsy/listings/trending.json',
-
-			// Now gimme the `localhost` version...
-			// See http://lodash.com/docs#extend
-			urlFor(_.extend({ }, API, {
-			  host: 'localhost',
-			  base: '/apis/etsy',
-			  params: { }
-			}))
-		);
-	});
-}); // describe(the API)
-
-describe('the data from the API', function(){
-	it('should have `id` fields for all entries', function(){
-		trending.map(function(product){
-			assert.isDefined(product.listing_id);
-		});
-	});
+it('should produce the correct URL', function(){
+    expect(urlForAPI()).to.equal(
+        'https://openapi.etsy.com/v2/listings/some-category.json' +
+        '?limit=50&offset=0&api_key=q4ubii6kukovuc0hl2e8myxx' +
+        '&fields=title%2Cdescription%2Cprice%2Ccurrency_code' +
+        '&includes=MainImage'
+    );
 });
 
-/* product ID in each of the trending items in the call */
-function productId(array){
-	for(i = 0; i < array.length ; i++ ){
-		id.push(array[i].listing_id)
-	}
-}
 
-/* Grabs the FULL image from each of the trending items in the call */
-function imageFull(array){
-	for(i = 0; i < array.length ; i++ ){
-		console.log(array[i].MainImage.url_fullxfull)
-	}
-}
+describe('transform', function(){
+    describe('given `trending.json` from the API', function(){
+        var trending;
 
-/* Grabs the SMALL image from each of the trending items in the call */
-function imageSmall(array){
-	for(i = 0; i < array.length ; i++ ){
-		console.log(array[i].MainImage.url_170x135)
-	}
-}
+        beforeEach(function(){
+            // Feed the raw Etsy data to `transform` to get nicer data...
+            trending = transform(require('./trending.json'));
+        });
 
-/* The currency codes for @mfees peace of mind */
-function currencyCode(array){
-	for(i = 0; i < array.length ; i++ ){
-		console.log(array[i].currency_code);
-	}
-}
-// productId(trending)
+        it('should have 50 results', function(){
+            assert.equal(trending.length, 50,
+                'Because we asked for `limit=50`, right?'
+            );
+        });
+        describe('the fields I expect to have for each listing', function(){
+            it('should have a `title` field', function(){
+                expect(_.pluck(trending, 'title').length).to.equal(trending.length);
+            });
+
+            it('should have a `description` field', function(){
+                expect(_.pluck(trending, 'description').length).to.equal(trending.length);
+            });
+
+            it.skip('should NOT have a `foo` field', function(){
+                expect(_.pluck(trending, 'foo').length).to.equal(0);
+            });
+
+            it('should have a `MainImage` field', function(){
+                expect(trending[0].images).to.be.a('object');
+                expect(trending[0].images.full).to.be.a('string');
+                expect(trending[0].images.small).to.be.a('string');
+            })
+        });
+    }); // END describe `trending.json`
+
+    describe('given `some-category.json` from the API', function(){
+        var products;
+
+        beforeEach(function(){
+            products = transform(require('./some-category.json'));
+        });
+
+        describe('everything that `trending.json` has, right?', function(){
+
+        });
+    })
+});
