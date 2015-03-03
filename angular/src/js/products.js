@@ -10,11 +10,11 @@
 
         var view = 'grid';
 
-        this.getView = function(){
+        this.getView = function () {
             return view;
         }
 
-        this.setView = function(switchTo){
+        this.setView = function (switchTo) {
             // if ( switchTo is 'grid' or 'list' )
             view = switchTo;
         }
@@ -48,7 +48,7 @@
                     },
         {
             title: "Title2",
-            price: "$10.00",
+            price: 10,
             description: "This is the most spectacular description of all time. Dont you think?",
             MainImage: [
                 {
@@ -60,7 +60,7 @@
                     },
         {
             title: "Title3",
-            price: "$15.00",
+            price: 15,
             description: "This is the most spectacular description of all time. Dont you think?",
             MainImage: [
                 {
@@ -73,7 +73,7 @@
 
         {
             title: "Title4",
-            price: "$20.00",
+            price: 20,
             description: "This is the most spectacular description of all time. Dont you think?",
             MainImage: [
                 {
@@ -86,7 +86,7 @@
 
         {
             title: "Title5",
-            price: "$25.00",
+            price: 25,
             description: "This is the most spectacular description of all time. Dont you think?",
             MainImage: [
                 {
@@ -98,7 +98,7 @@
                     },
         {
             title: "Title6",
-            price: "$30.00",
+            price: 30,
             description: "This is the most spectacular description of all time. Dont you think?",
             MainImage: [
                 {
