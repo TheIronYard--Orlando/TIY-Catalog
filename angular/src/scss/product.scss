@@ -1,28 +1,33 @@
 @import 'bootstrap';
 $main: cornflowerblue;
-
-
-
-.product-wrapper{
+.product-wrapper {
     color: $main;
 }
+
 .product-detail > img {
     padding: 2em;
     border: solid $main 4px;
 }
-/******
-    Changing the position to relative on all product divs for the top right button
-    We can totally take this out if it breaks too much stuff
-*******/
+
 .product-detail {
-	position: relative;
+    @extend .col-md-4;
+    @extend .col-sm-6;
+    position: relative;
 }
 
 .product-select {
+    @extend .btn-group;
+    @extend .dropup;
+    
     width: 100%;
     display: inline;
 }
-.product-select > .btn {
+
+.info-button  {
+    @extend .btn;
+    @extend .btn-default;
+    @extend .dropdown-toggle;
+    
     width: 20%;
     margin-top: -0.8ex;
     border-radius: 0;
@@ -30,11 +35,11 @@ $main: cornflowerblue;
     border-left: solid $main 2px;
     border-top: solid $main 4px;
     border-bottom: solid $main 4px;
-}
-
-.btn > span {
-    font-size: 2em;
-    color: $main;
+    
+    span {
+        font-size: 2em;
+        color: $main;
+    }
 }
 
 .product-name {
@@ -51,7 +56,6 @@ $main: cornflowerblue;
     font-size: 1.5em;
     font-weight: bolder;
 }
-
 /****************
 * Media Queries
 ****************/
