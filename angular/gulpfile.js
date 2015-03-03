@@ -1,39 +1,31 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var notify = require('gulp-notify');
-var bower = require('gulp-bower');
-var config = {
-    sassPath: './src/scss',
-    bowerDir: './bower_components'
-};
 var browserSync = require('browser-sync');
 
-gulp.task('bower', function(){
-    return bower()
-    .pipe(gulp.dest(config.bowerDir));
+
+gulp.task('sass', function () {
+    return gulp.src('src/scss/*.scss')
+        .pipe(sass({
+          includePaths: [
+            'bower_components/bootstrap-sass/assets/stylesheets/'
+          ],
+          onError: console.error.bind(console, 'Sass error:')
+        }))
+        .pipe(gulp.dest('src/css'));
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('watch', function () {
+    gulp.watch('src/scss/*.scss', ['sass']);
+});
+
+gulp.task('serve', function () {
     browserSync({
         server: {
             baseDir: "./src",
-            index: "product.html"
+            directory: true,
+            routes: {
+                "/bower_components": "bower_components"
+            }
         }
     });
-});
-
-
-gulp.task('sass', function() {
-    gulp.src('src/scss/*.scss')	 
-    .pipe(sass({
-    style: 'compressed',
-    loadPath: [
-    './src/scss'
-    config.bowerDir + '/bootstrap'
-    ]
-    })
-//    .on('error', notify.onError(function (error){
-//    return 'Error: ' + error.message;
-//    })))
-//    .pipe(gulp.dest('./src/css'));
 });
