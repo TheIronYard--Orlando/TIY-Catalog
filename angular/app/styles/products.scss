@@ -1,18 +1,13 @@
 @import 'bootstrap';
 $blueColor: #58A4D7;
 $grayColor: #D0D0D0;
-::before {
+:before {
     color: $grayColor;
 }
 
 :hover:before {
     color: $blueColor;
 }
-/*  **Known Issue Selected Anchor tag will need to add a class to change its color**
-    :selected:before {
-        color: #58A4D7;
-    }
-*/
 
 .container {
     border: 3px solid #47a3da;

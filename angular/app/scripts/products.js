@@ -1,7 +1,6 @@
 (function () {
     var app = angular.module("tiy-catalog", []);
 
-
     app.controller('StoreController', function () {
 
         var self = this;
