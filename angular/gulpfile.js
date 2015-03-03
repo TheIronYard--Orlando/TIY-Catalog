@@ -1,25 +1,25 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-
 var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/*.scss')
         .pipe(sass({
-          includePaths: [
-            'bower_components/bootstrap-sass/assets/stylesheets/'
-          ],
-          onError: console.error.bind(console, 'Sass error:')
+            includePaths: [
+          'bower_components/bootstrap-sass/assets/stylesheets/'
+        ],
+            onError: console.error.bind(console, 'Sass error:')
         }))
-        .pipe(gulp.dest('src/css'));
+        .pipe(gulp.dest('src/css'))
+        .pipe(reload({
+            stream: true
+        }));
 });
 
-gulp.task('watch', function () {
-    gulp.watch('src/scss/*.scss', ['sass']);
-});
 
-gulp.task('serve', function () {
+gulp.task('serve', ['sass'], function () {
     browserSync({
         server: {
             baseDir: "./src",
@@ -29,4 +29,10 @@ gulp.task('serve', function () {
             }
         }
     });
+
+    gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch("src/*.html").on('change', reload);
+
 });
+
+gulp.task('default', ['serve']);
