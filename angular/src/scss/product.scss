@@ -1,58 +1,73 @@
-@import "bootstrap-sass/assets/stylesheets/bootstrap";
-
-$blue: cornflowerblue;
-
+@import 'bootstrap';
+$main: cornflowerblue;
 .product-wrapper {
-  @extend .container;
+    color: $main;
+}
 
-  color: $blue;
-  /**
-   * Changing the position to relative on all product divs for the top right button
-   * We can totally take this out if it breaks too much stuff
-   */
-  .product-detail {
+.product-detail > img {
+    padding: 2em;
+    border: solid $main 4px;
+}
+
+.product-detail {
     @extend .col-md-4;
     @extend .col-sm-6;
-
     position: relative;
-    border-radius: 0;
-    img {
-      @extend .img-responsive;
+}
 
-      padding: 2em;
-      border: solid $blue 4px;
-    }
-  }
-  .product-select {
+.product-select {
+    @extend .btn-group;
+    @extend .dropup;
+    
     width: 100%;
     display: inline;
-    .btn {
-      width: 20%;
-      margin-top: -0.8ex;
-      border-radius: 0;
-      border: solid $blue;
-      border-width: 4px 2px;
+}
+
+.info-button  {
+    @extend .btn;
+    @extend .btn-default;
+    @extend .dropdown-toggle;
+    
+    width: 20%;
+    margin-top: -0.8ex;
+    border-radius: 0;
+    border-right: solid $main 2px;
+    border-left: solid $main 2px;
+    border-top: solid $main 4px;
+    border-bottom: solid $main 4px;
+    
+    span {
+        font-size: 2em;
+        color: $main;
     }
-  }
-  /*
-    .product-select > .btn:first-child {
-        border-left: solid $blue 4px;
-    }
-    .product-select > .btn:last-child {
-        border-right: solid $blue 4px;
-    }
-    */
-  .product-name {
+}
+
+.product-name {
     display: block;
     float: left;
     margin: 0.5ex 0;
     font-weight: 400;
-  }
-  .price {
+}
+
+.price {
     text-align: right;
     display: block;
-    margin: 0.7ex 0;
+    line-height: 3.5ex;
     font-size: 1.5em;
     font-weight: bolder;
-  }
-} /* END .product-wrapper */
+}
+/****************
+* Media Queries
+****************/
+
+@media (max-width: 767px) {
+    .container {
+        width: 57.5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+}
