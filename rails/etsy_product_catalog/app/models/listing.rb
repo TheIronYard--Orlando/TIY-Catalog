@@ -4,5 +4,4 @@ class Listing < ActiveRecord::Base
  def main_image
   Image.where(etsy_listing_id: etsy_listing_id).first.url_fullxfull
  end
-
 end

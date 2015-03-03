@@ -1,5 +1,3 @@
-<h1>The Iron Yard Catalog</h1>
-
 <div class="container">
   <% @listings.each do |list| %>
     <%= link_to "#{list.title}<br> #{image_tag(list.main_image, size: '270x270')}".html_safe, listing_path(list.id), class: 'display' %> 

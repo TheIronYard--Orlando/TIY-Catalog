@@ -21,9 +21,9 @@
  body {
   font-family: 'Merriweather', serif;
  }
-h1 {
-  text-align: center;
-  font-size: 4.1em;
+.nav_bar {
+  text-align: left;
+  font-size: 2.1em;
   background-color: teal;
   padding: 20px;
   color: white;
@@ -93,4 +93,26 @@ a:hover {
   width: 25%;
   padding: 40px;
 }
+.logo {
+  color: white;
+}
+.cart {
+  -webkit-filter: invert(100%);
+  float: right;
+  display: inline;
+  position: relative;
+  padding-right: 10%; 
+}
+.cart:hover {
+  -webkit-filter: invert(80%);
+}
+.nav_bar {
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+
+
 

@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class='nav_bar'>
+    <div class="logo">
+      <%= link_to 'TIY Catalog', root_path, class: 'logo' %>
+      <%= link_to( image_tag('cart.png', size: '40x40', class: 'cart').html_safe, '#') %>
+    </div>
+  </nav>
 
 <%= yield %>
 
