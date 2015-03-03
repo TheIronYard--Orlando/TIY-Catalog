@@ -1,10 +1,12 @@
 @import 'bootstrap';
+$blueColor: #58A4D7;
+$grayColor: #D0D0D0;
 ::before {
-    color: #D0D0D0;
+    color: $grayColor;
 }
 
 :hover:before {
-    color: #58A4D7;
+    color: $blueColor;
 }
 /*  **Known Issue Selected Anchor tag will need to add a class to change its color**
     :selected:before {
@@ -77,7 +79,6 @@
     }
 }
 
-
 .glyphicon-plus-sign:before {
     color: white;
 }
@@ -130,11 +131,11 @@ li {
 .list-title {
     margin-top: 12.5%;
     font-size: 2em;
-    color: #58A3D6;
+    color: $blueColor;
 }
 
 .price {
-    color: #C0C0C0;
+    color: $grayColor;
     font-size: 2em;
     display: block;
 }
@@ -145,7 +146,7 @@ li {
 
 .list-description {
     margin-top: 12%;
-    color: #59A4D7;
+    color: $blueColor;
     padding: 0;
 }
 
@@ -155,19 +156,19 @@ li {
 
 .list-img {
     padding: 0;
-    border: 0.5em solid lightgray;
+    border: 0.5em solid $grayColor;
     margin-bottom: 2em;
     display: block;
 }
 
-.listing-img:hover {
+.list-img:hover {
     border: 0.5em solid grey;
 }
 
 .cartbutton {
     margin-bottom: 2em;
     color: white;
-    background-color: #47a3da;
+    background-color: $blueColor;
     border-radius: 2px;
     height: 3em;
     padding: 1em;
