@@ -23,10 +23,9 @@
  body {
   font-family: 'Merriweather', serif;
  }
-
-h1 {
-  text-align: center;
-  font-size: 4.1em;
+.nav_bar {
+  text-align: left;
+  font-size: 2.1em;
   background-color: teal;
   padding: 20px;
   color: white;
@@ -37,7 +36,7 @@ h1 {
 }
 
 h2 {
-  padding: 15px;
+  padding: 100px 15px 15px 15px;
 }
 
 h3 {
@@ -56,7 +55,6 @@ li {
 a, .back_button {
   color: #2980b9;
   text-decoration:none;
-  /*the Transition*/
   transition:ease .4s;
   -webkit-transition:ease .4s;
   -ms-transition:ease .4s;
@@ -64,15 +62,14 @@ a, .back_button {
   -o-transition:ease .4s;
 }
 
-.signup a {
+.signup {
   float: right;
-  margin-right: 30px;
-  margin-top: 20px;
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
+  padding-right: 30px; 
 }
 
-.signup a:hover {
+.signup:hover {
   color: white;
   opacity: .7;
 }
@@ -83,8 +80,8 @@ a:hover {
 }
 
 .back_button {
-  padding: 10px;
-  margin: 0 0 0 10px;
+  padding: 2.5px 2.5px;
+  margin: 0 0 40px 10px;
   background-color: cadetblue;
   border-radius: 3px;
   color: white;
@@ -101,12 +98,44 @@ a:hover {
   text-align: right;
   padding-right: 40px;
 }
-
-
-
-
-
-
+.container {
+  display: flex;
+  height: 300px; 
+}
+.img {
+  width: 100px;  
+  height: 100px; 
+  margin: auto;  
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 100px; 
+}
+.display {
+  width: 25%;
+  padding: 40px;
+}
+.logo {
+  color: white;
+}
+.cart {
+  -webkit-filter: invert(100%);
+  float: right;
+  display: inline;
+  position: relative;
+  padding-right: 10%; 
+}
+.cart:hover {
+  -webkit-filter: invert(80%);
+}
+.nav_bar {
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
 
 
 
