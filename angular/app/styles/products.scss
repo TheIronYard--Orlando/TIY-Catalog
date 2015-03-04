@@ -11,8 +11,8 @@ $grayColor: #D0D0D0;
 
 .container-fluid {
     border: 3px solid #47a3da;
-    padding-top: 2em;
-    margin: 3em 15%;
+    padding: 2em 30px 0;
+    margin: 3em 10%;
 }
 
 section {
@@ -49,6 +49,10 @@ h1 {
         .list-button {
             margin-bottom: 3em;
         }
+    .price {
+        font-size: 1.75em;
+        padding: 0.5ex;
+    }
     }
 }
 
@@ -65,7 +69,7 @@ h1 {
             @extend .col-sm-2;
             @extend .list-title;
         }
-        span {
+        .price {
             @extend .col-xs-3;
             @extend .col-sm-2;
             @extend .list-price;
@@ -81,6 +85,12 @@ h1 {
             @extend .col-sm-12;
             @extend .col-md-2;
             @extend .list-button;
+        }
+        .cart-button {
+            width: 100%;
+        }
+        .row {
+            line-height: 157px;
         }
     }
 }
@@ -146,8 +156,10 @@ li {
     //    margin-top: 12.5%;    
     font-size: 2em;
     color: $blueColor;
-    line-height: 157px;
-    vertical-align: middle;
+    //    line-height: 157px;
+    //    vertical-align: middle;
+    padding: auto 1ex;
+    margin-top: 6%;
 }
 
 .price {
@@ -158,16 +170,19 @@ li {
 
 .list-price {
     //    margin-top: 12%;
-    line-height: 157px;
-    vertical-align: middle;
+    //    line-height: 157px;
+    //    vertical-align: middle;
+    margin-top: 6%;
+    line-height: 1.0;
 }
 
 .list-description {
     //    margin-top: 12%;
     color: $blueColor;
-    padding: 0;
-    height: 157px;
+    padding: 0 1em;
+    list-style: none;
     vertical-align: middle;
+    margin-top: 6%;
 }
 
 .grid-description {
@@ -180,8 +195,8 @@ li {
     //    margin-bottom: 2em;
     display: block;
     max-width: 100%;
-    line-height: 157px;
-    vertical-align: middle;
+    //    line-height: 157px;
+    //    vertical-align: middle;
 }
 
 .list-img:hover {
@@ -194,10 +209,13 @@ li {
     background-color: $blueColor;
     border-radius: 2px;
     height: 3em;
-    padding: 1em;
+    padding: 1em 2em;
     //    margin-bottom: 4em;
     font-size: 1em;
     display: inline-block;
+    text-align: center;
+    min-width: 144px;
+    min-height: 42px;
 }
 
 .cartbutton:hover {
@@ -210,6 +228,7 @@ li {
 .list-button {
     //    margin-top: 12%;
     padding: 0;
+    margin-top: 6%;
 }
 
 .list-li {
@@ -221,15 +240,15 @@ li {
 
 @media (max-width: 48em) {}
 
-@media (max-width: 67em) {
+@media (max-width: 992px) {
     .list-title {
-        //        margin-top: 23.5%;
+        margin-top: 7%;
     }
     .list-price {
-        //        margin-top: 22%;
+        margin-top: 7%;
     }
     .list-description {
-        //        margin-top: -3%;
+        padding: 0;
     }
     .list-button {
         //        margin-top: 0;
