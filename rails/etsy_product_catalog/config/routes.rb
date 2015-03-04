@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get 'authorize' => 'sessions#authorize'
   
 
+  resources :categories do
+    resources :listings
+  end
+
 end
