@@ -35,8 +35,4 @@ gulp.task('serve', ['sass'], function () {
 
 });
 
-<<<<<<< HEAD
 gulp.task('default', ['serve']);
-=======
-gulp.task('default', ['serve']);
->>>>>>> upstream/master
