@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-	#has_many :listings
+	has_many :listings
 
 	def to_title
 		name.gsub("_", " ").titleize.gsub("And", "and")

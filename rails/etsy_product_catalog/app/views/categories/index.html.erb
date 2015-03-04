@@ -3,6 +3,6 @@
   <% @categories.each do |category| %>
   
     <ul>
-      <li><%= link_to cat_name.sub("_", " ").splitmap(&capitalize) category_path(category.id) %></li>
+      <li><%=link_to category.to_title, category_path(category)%></li>
      </ul> 
   <% end %>

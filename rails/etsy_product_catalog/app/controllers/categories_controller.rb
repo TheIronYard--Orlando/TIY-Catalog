@@ -8,11 +8,11 @@ class CategoriesController < ApplicationController
 	def show
 
 	end
-end
 
 
 private
 
 	def find_category
-		@Category = Category.find(params[:id])
+		@category = Category.find(params[:id])
 	end
+end
