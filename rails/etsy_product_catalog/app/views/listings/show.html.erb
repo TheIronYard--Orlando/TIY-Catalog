@@ -1,13 +1,11 @@
-<h1>Product details</h1>
 
 
     <h2><%= @listing.title %></h2>
+    <div class="product_img"><%= image_tag("#{@listing.main_image}", size: "470x470") %></div> 
     <p><%= @listing.description %></p>
     <%= image_tag("#{@listing.main_image}") %>
 
-
-
     <div class="to_the_right">
-      <h3>Price: $<%= @listing.price %></h3>
+      <h3>Price: <%= number_to_currency(@listing.price) %></h3>
       <%= link_to 'Back', root_path, class: 'back_button' %>
     </div>

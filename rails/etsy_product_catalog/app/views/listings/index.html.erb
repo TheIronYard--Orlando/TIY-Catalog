@@ -1,7 +1,5 @@
-<h1>Etsy </h1>
-
+<div class="container">
   <% @listings.each do |list| %>
-    <ul>
-      <li><%= link_to list.title, listing_path(list.id) %></li>
-     </ul> 
+    <%= link_to "#{list.title}<br> #{image_tag(list.main_image, size: '270x270')}".html_safe, listing_path(list.id), class: 'display' %> 
   <% end %>
+</div>

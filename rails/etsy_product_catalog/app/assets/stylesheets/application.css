@@ -14,16 +14,18 @@
  *= require_self
  */
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic);
+
 * {
   padding: 0;
   margin: 0;
 }
+
  body {
   font-family: 'Merriweather', serif;
  }
-h1 {
-  text-align: center;
-  font-size: 4.1em;
+.nav_bar {
+  text-align: left;
+  font-size: 2.1em;
   background-color: teal;
   padding: 20px;
   color: white;
@@ -32,56 +34,108 @@ h1 {
   box-shadow:         1px 1px 3px 4px #ccc;
   margin-bottom: 30px;
 }
+
 h2 {
-  padding: 15px;
+  padding: 100px 15px 15px 15px;
 }
+
 h3 {
   padding: 20px;
 }
+
 p {
   padding: 20px;
 }
+
 li {
   list-style: none;
   padding: 15px;
 }
+
 a, .back_button {
   color: #2980b9;
   text-decoration:none;
-  /*the Transition*/
   transition:ease .4s;
   -webkit-transition:ease .4s;
   -ms-transition:ease .4s;
   -moz-transition:ease .4s;
   -o-transition:ease .4s;
 }
+
+.signup {
+  float: right;
+  color: white;
+  font-size: 1em;
+  padding-right: 30px; 
+}
+
+.signup:hover {
+  color: white;
+  opacity: .7;
+}
+
 a:hover {
   text-decoration: none;
   color: #666;
 }
+
 .back_button {
-  padding: 10px;
-  margin: 0 0 0 10px;
+  padding: 2.5px 2.5px;
+  margin: 0 0 40px 10px;
   background-color: cadetblue;
   border-radius: 3px;
   color: white;
   font-size: 1.2em;
 }
+
 .back_button:hover {
   text-decoration:none;
   background-color: darkcyan;
   color: #ecf0f1;
 }
+
 .to_the_right {
   text-align: right;
   padding-right: 40px;
 }
-
-
-
-
-
-
+.container {
+  display: flex;
+  height: 300px; 
+}
+.img {
+  width: 100px;  
+  height: 100px; 
+  margin: auto;  
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 100px; 
+}
+.display {
+  width: 25%;
+  padding: 40px;
+}
+.logo {
+  color: white;
+}
+.cart {
+  -webkit-filter: invert(100%);
+  float: right;
+  display: inline;
+  position: relative;
+  padding-right: 10%; 
+}
+.cart:hover {
+  -webkit-filter: invert(80%);
+}
+.nav_bar {
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
 
 
 
