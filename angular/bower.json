@@ -25,5 +25,6 @@
   },
   "devDependencies": {
     "bootstrap-sass": "~3.3.3"
+    "modernizr": "~2.8.1"
   }
 }
