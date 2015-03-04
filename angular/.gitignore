@@ -1,15 +1,12 @@
-## Installed components..
-/bower_components/
-/node_modules/
+## Installed components...
+node_modules
+bower_components
+test/bower_components
 
-## Built via gulp tasks...
-/dist/
-/src/css/
-
-## JRU's VIM ignores... move to `~/.gitignore` ?
-.swo
-.swa
-.swp
+## Build artifacts...
+dist
+.tmp
+.sass-cache
 
 ## Damn Mac OS X!
 .DS_Store
