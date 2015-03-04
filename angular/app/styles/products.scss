@@ -49,10 +49,10 @@ h1 {
         .list-button {
             margin-bottom: 3em;
         }
-    .price {
-        font-size: 1.75em;
-        padding: 0.5ex;
-    }
+        .price {
+            font-size: 1.75em;
+            padding: 0.5ex;
+        }
     }
 }
 
@@ -61,7 +61,7 @@ h1 {
         @extend .row;
         img {
             @extend .list-img;
-            @extend .col-xs-3;
+            @extend .col-xs-2;
             @extend .col-sm-2;
         }
         h1 {
