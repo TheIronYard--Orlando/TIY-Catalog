@@ -32,28 +32,29 @@
 
 <body ng-app="tiy-catalog" ng-controller="StoreController as store">
 
-    <div class="container">
+    <div class="container-fluid">
 
         <nav class="navbar">
             <a ng-click="store.setView('list')" class="glyphicon glyphicon-th-list"></a>
             <a ng-click="store.setView('grid')" class="navAnchors glyphicon glyphicon-th"></a>
         </nav>
 
-        <section class="tab-content container-fluid">
-            <div ng-show="store.isSelected(1)" class="listings" ng-class="store.getView()">
-                <div ng-repeat="item in store.items" class="listing">
-                    <img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
+        <section class="tab-content">
+            <ul ng-show="store.isSelected(1)" class="listings" ng-class="store.getView()">
+                <li ng-repeat="item in store.items" class="listing">
+                    <a href="#"><img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
+                    </a>
                     <h1>{{item.title}}</h1>
                     <span class="price">{{item.price | currency}}</span>
                     <p class="grid-descrition">{{item.description}}</p>
                     <div class="list-button">
-                        <a class="cartbutton">
+                        <a href="#" class="cartbutton">
                             <icon class="glyphicon glyphicon-plus-sign">
                             </icon> Add to cart
                         </a>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
 
     </div>

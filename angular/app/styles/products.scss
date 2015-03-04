@@ -1,5 +1,5 @@
 @import 'bootstrap';
-$blueColor: #58A4D7;
+$blueColor: #58A3D5;
 $grayColor: #D0D0D0;
 :before {
     color: $grayColor;
@@ -9,11 +9,23 @@ $grayColor: #D0D0D0;
     color: $blueColor;
 }
 
-.container {
+.container-fluid {
     border: 3px solid #47a3da;
     padding-top: 2em;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin: 3em 10%;
+}
+
+section {
+    //    margin: 5%;
+}
+
+li {
+    padding: 2em;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .listings {
@@ -26,6 +38,9 @@ $grayColor: #D0D0D0;
         @extend .col-sm-6;
         @extend .col-md-4;
         @extend .text-center;
+        .list-button {
+            margin-bottom: 3em;
+        }
     }
 }
 
@@ -81,7 +96,7 @@ $grayColor: #D0D0D0;
 img {
     border: 0.5em solid lightgray;
     text-align: center;
-    margin-top: 4em;
+    //    margin-top: 4em;
 }
 
 img:hover {
@@ -111,20 +126,16 @@ li {
     /*        margin-top: 11%;*/
 }
 
-.container {
-    border: 5px solid #47a3da;
-}
-
 .navbar {
     border-bottom: 3px solid #58A3D5;
     right: 0;
     margin-bottom: 0em;
-    padding-top: 1em;
+    padding-top: 0em;
     width: 100%;
 }
 
 .list-title {
-    margin-top: 12.5%;
+    //    margin-top: 12.5%;    
     font-size: 2em;
     color: $blueColor;
 }
@@ -136,24 +147,25 @@ li {
 }
 
 .list-price {
-    margin-top: 12%;
+    //    margin-top: 12%;
 }
 
 .list-description {
-    margin-top: 12%;
+    //    margin-top: 12%;
     color: $blueColor;
     padding: 0;
 }
 
 .grid-description {
-    margin: 1em 4em;
+    //    margin: 1em 4em;
 }
 
 .list-img {
     padding: 0;
     border: 0.5em solid $grayColor;
-    margin-bottom: 2em;
+    //    margin-bottom: 2em;
     display: block;
+    max-width: 100%;
 }
 
 .list-img:hover {
@@ -161,13 +173,13 @@ li {
 }
 
 .cartbutton {
-    margin-bottom: 2em;
+    //    margin-bottom: 2em;
     color: white;
     background-color: $blueColor;
     border-radius: 2px;
     height: 3em;
     padding: 1em;
-    margin-bottom: 4em;
+    //    margin-bottom: 4em;
     font-size: 1em;
     display: inline-block;
 }
@@ -175,11 +187,12 @@ li {
 .cartbutton:hover {
     text-decoration: none;
     color: white;
-    background-color: darkblue;
+    background-color: #02639d;
+    transition: 0.5s;
 }
 
 .list-button {
-    margin-top: 12%;
+    //    margin-top: 12%;
     padding: 0;
 }
 
@@ -188,17 +201,22 @@ li {
     margin-top: 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 40em) {}
+
+@media (max-width: 48em) {}
+
+@media (max-width: 67em) {
     .list-title {
-        margin-top: 23.5%;
+        //        margin-top: 23.5%;
     }
     .list-price {
-        margin-top: 22%;
+        //        margin-top: 22%;
     }
     .list-description {
-        margin-top: -3%;
+        //        margin-top: -3%;
     }
     .list-button {
-        margin-top: 0;
+        //        margin-top: 0;
+        margin-bottom: 2em;
     }
 }
