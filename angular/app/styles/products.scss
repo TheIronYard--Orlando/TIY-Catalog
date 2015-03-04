@@ -12,7 +12,7 @@ $grayColor: #D0D0D0;
 .container-fluid {
     border: 3px solid #47a3da;
     padding-top: 2em;
-    margin: 3em 10%;
+    margin: 3em 15%;
 }
 
 section {
@@ -26,6 +26,14 @@ li {
 ul {
     margin-left: 0;
     padding-left: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
 }
 
 .listings {
