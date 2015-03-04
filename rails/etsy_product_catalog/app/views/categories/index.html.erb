@@ -1,8 +1,8 @@
 <h1>Etsy Categories</h1>
 
-  <% @categories.each do |category| %>
+<% @categories.each do |category| %>
   
-    <ul>
-      <li><%=link_to category.to_title, category_path(category)%></li>
-     </ul> 
-  <% end %>
+  <ul>
+    <li><%=link_to category.to_title, category_path(category)%></li>
+  </ul> 
+<% end %>

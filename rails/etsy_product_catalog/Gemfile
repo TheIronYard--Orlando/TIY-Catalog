@@ -15,7 +15,7 @@ gem 'pry-rails'
 gem 'awesome_print'
 gem 'etsy'
 gem 'figaro'
- gem 'sqlite3'
+gem 'sqlite3'
 
 
 

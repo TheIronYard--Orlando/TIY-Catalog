@@ -1,18 +1,18 @@
 class CategoriesController < ApplicationController
-	before_action :find_category, only: [:show]
+  before_action :find_category, only: [:show]
 
-	def index
-		@categories = Category.all
-	end
+  def index
+    @categories = Category.all
+  end
 
-	def show
+  def show
 
-	end
+  end
 
 
 private
 
-	def find_category
-		@category = Category.find(params[:id])
-	end
+  def find_category
+    @category = Category.find(params[:id])
+  end
 end
