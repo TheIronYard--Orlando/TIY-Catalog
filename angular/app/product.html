@@ -23,11 +23,10 @@
 	<div id='container'>			
 		<section class='product-wrap' ng-controller='ProductController as product'>
 			<section class ='topcontent'>	
-				<div class='morepictures' ng-click='product.moarpics()'>M</div>	
+				<div class='morepictures' ng-click='product.morepics()'>M</div>	
 					<div class='imageholder'>	
-						<img src=
-						'http://ecx.images-amazon.com/images/I/413Bb57WyVL._SX342_.jpg' 
-						alt='product image' />				
+							<img ng-src='{{product.pics[product.imgnum]}}' 
+						alt='product picture'/>				
 					</div><!--imageholder-->		
 			</section><!--topcontent-->	
 			<div class='productinfo'>
