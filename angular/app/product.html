@@ -16,41 +16,39 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- bower:css -->
     <!-- endbower -->
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <link rel='stylesheet' href='css/product.css' />
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
-<body ng-app='elproduct'>
-	<div id='container'>			
-		<section class='product-wrap' ng-controller='ProductController as product'>
-			<section class ='topcontent'>	
-				<div class='morepictures' ng-click='product.morepics()'>M</div>	
-					<div class='imageholder'>	
-							<img ng-src='{{product.pics[product.imgnum]}}' 
-						alt='product picture'/>				
-					</div><!--imageholder-->		
-			</section><!--topcontent-->	
-			<div class='productinfo'>
-				<nav class='productbuttons'>	
+<body ng-app="elproduct">
+	<div id="container">
+		<section class="product-wrap" ng-controller="ProductController as product">
+			<section class ="topcontent">
+				<div class="morepictures" ng-click="product.morepics()">M</div>
+					<div class="imageholder">
+							<img ng-src="{{product.pics[product.imgnum]}}"
+						alt="product picture"/>
+					</div><!--imageholder-->
+			</section><!--topcontent-->
+			<div class="productinfo">
+				<nav class="productbuttons">
 					<ul>
 						<li>M</li>
-						<li ng-mouseover='product.moused()'>M</li>
+						<li ng-mouseover="product.moused()">M</li>
 						<li>M</li>
 						<li>M</li>
 					</ul>
 				</nav><!--productbuttons-->
-				<div class='title'><span>{{'Lochness Monster'}}</span></div>
-				<div class='price'><span>{{'3.50' | currency}}</span></div>
-			</div><!--productinfo-->	
-		</section><!--product-wrap-->	
-	</div><!--container -->		
+				<div class="title"><span>{{'Lochness Monster'}}</span></div>
+				<div class="price"><span>{{'3.50' | currency}}</span></div>
+			</div><!--productinfo-->
+		</section><!--product-wrap-->
+	</div><!--container -->
 	<!--product container called product-wrapper -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
-    <script src="js/plugins.js"></script>
-    <script src="js/product.js"></script>
+    <script src="scripts/product.js"></script>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

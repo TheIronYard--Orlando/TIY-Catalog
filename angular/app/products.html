@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- bower:css -->
-    <!--  endbower -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- bower:js -->
-    <script src='/bower_components/jquery/dist/jquery.js'></script>
-    <script src='/bower_components/angular/angular.js'></script>
-    <script src='/bower_components/lodash/lodash.js'></script>
-    <!-- endbower -->
-
-</head>
-
-
-
-<body ng-app="tiy-catalog" ng-controller="StoreController as store">
-
-    <div class="container-fluid">
-
+    <header ng-controller="StoreController as store">
         <nav class="navbar">
             <a href="#" ng-click="store.setView('list')" ng-class="{true: 'active'}[store.getView() === 'list']" class="glyphicon glyphicon-th-list"></a>
             <a href="#" ng-click="store.setView('grid')" ng-class="{true: 'active'}[store.getView() === 'grid']" class="glyphicon glyphicon-th"></a>
@@ -52,15 +20,4 @@
                 </li>
             </ul>
         </section>
-
-    </div>
-
-    <script src="scripts/products.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script type='text/javascript' id="__bs_script__">
-        document.write("<script async src='//HOST:3004/browser-sync/browser-sync-client.1.9.1.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
-    </script>
-
-</body>
-
-</html>
+    </header>
