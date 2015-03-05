@@ -107,24 +107,30 @@ h1 {
 }
 
 .cattitle {
-    background-color: cornflowerblue;
+    background-color: #47A3DA;
     margin: 1px 0;
     padding: 1ex 0;
     color: white;
     font-size: 1.5em;
     text-align: center;
     font-weight: 200;
-    font-family: arial;
+    font-family: 'Lato';
     cursor: pointer;
 }
 
 .cattitle:hover {
-    color: blue;
+    color: #02639D;
+}
+
+.cattitle span {
+    float: right;
+    margin-right: .25em;
 }
 
 .catbox {
-    background-color: snow;
-    color: darkgray;
+    background-color: #F7F7F7;
+    color: #A2A2A2;
+    display: none;
 }
 
 .catbox img {
