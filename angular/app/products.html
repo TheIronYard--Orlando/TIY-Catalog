@@ -35,8 +35,8 @@
     <div class="container-fluid">
 
         <nav class="navbar">
-            <a href="#" ng-click="store.setView('list')" ng-class="{active:store.isSeclected(2)}" class="glyphicon glyphicon-th-list"></a>
-            <a href="#" ng-click="store.setView('grid')" ng-class="{ active:store.isSeclected(1)}" class="navAnchors glyphicon glyphicon-th"></a>
+            <a href="#" ng-click="store.setView('list')" ng-class="{true: 'active'}[store.getView() === 'list']" class="glyphicon glyphicon-th-list"></a>
+            <a href="#" ng-click="store.setView('grid')" ng-class="{true: 'active'}[store.getView() === 'grid']" class="glyphicon glyphicon-th"></a>
         </nav>
 
         <section class="tab-content">
@@ -67,7 +67,6 @@
     <script type='text/javascript' id="__bs_script__">
         document.write("<script async src='//HOST:3004/browser-sync/browser-sync-client.1.9.1.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
     </script>
-
 
 </body>
 

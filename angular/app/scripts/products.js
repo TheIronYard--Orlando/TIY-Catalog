@@ -22,7 +22,7 @@
 
         this.selectTab = function (setTab) {
             self.tab = setTab;
-            console.log(self.tab)
+            //            console.log(self.tab)        
         }
 
         this.isSelected = function (nextTab) {
