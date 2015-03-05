@@ -1,73 +1,82 @@
-@import 'bootstrap';
 $main: cornflowerblue;
-.product-wrapper {
-    color: $main;
-}
 
-.product-detail > img {
-    padding: 2em;
-    border: solid $main 4px;
+#container {
+	width: 90%;
+	margin: 0 auto;
 }
+.product-wrap {
+	width: 33%;
+	position: relative;	
+	border: 3px solid blue;	
+		.imageholder{		
+			img {
+				width: 70%;
+				margin: 0 15%;
+			}	
+		}
+	.morepictures {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 30px;
+		height: 30px;
+		text-align: center;	
+		cursor: pointer;
+		border-left: 3px solid blue;
+		border-bottom: 3px solid blue;
+		line-height: 2em;
+		color: blue;	
+	}
+	.morepictures:hover {
+		background-color: blue;
+		color: white;
+	}
+	.productinfo {
+		position: relative;	
+		height: 3em;
+		ul{
+			margin: 0;
+			padding: 0;	
+			list-style-type: none;
+		}
+		li {
+			float: left;
+			box-sizing: border-box;
+			width: 25%;
+			margin: 0;
+			padding: 0;
+			border-right: 3px solid blue;
+			text-align: center;	
+			line-height: 1.5em;	
+			border-top: 3px solid blue;	
+			color: blue;	
+			cursor: pointer;	
+			font-size: 2em;	
+		}
+		li:last-child {
+			border-right: 0;	
+		}	
+		li:hover{
+			background-color: blue;
+			color: white;	
+		}	
+		.productbuttons {
+		}		
+		.title {
+			font-size: 2em;	
+			color: blue;	
+			float: left;	
+			margin-top: 1em;	
+		}	
+		.price {
+			font-size: 2em;
+			color: blue;
+			float: right;
+			margin-top: 1em;
+		}
 
-.product-detail {
-    @extend .col-md-4;
-    @extend .col-sm-6;
-    position: relative;
-}
+	}
 
-.product-select {
-    @extend .btn-group;
-    @extend .dropup;
-    
-    width: 100%;
-    display: inline;
-}
 
-.info-button  {
-    @extend .btn;
-    @extend .btn-default;
-    @extend .dropdown-toggle;
-    
-    width: 20%;
-    margin-top: -0.8ex;
-    border-radius: 0;
-    border-right: solid $main 2px;
-    border-left: solid $main 2px;
-    border-top: solid $main 4px;
-    border-bottom: solid $main 4px;
-    
-    span {
-        font-size: 2em;
-        color: $main;
-    }
-}
 
-.product-name {
-    display: block;
-    float: left;
-    margin: 0.5ex 0;
-    font-weight: 400;
-}
-
-.price {
-    text-align: right;
-    display: block;
-    line-height: 3.5ex;
-    font-size: 1.5em;
-    font-weight: bolder;
-}
-/****************
-* Media Queries
-****************/
-
-@media (max-width: 767px) {
-    .container {
-        width: 57.5%;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        width: 90%;
-    }
-}
+}//end of product wrap class

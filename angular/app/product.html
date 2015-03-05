@@ -19,105 +19,31 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <link rel='stylesheet' href='css/product.css' />
 </head>
-
-<body ng-app="elproduct">
-
-    <div ng-controller="ProductController as prod" class='product-wrapper container'>
-        <div class="row">
-            <div ng-repeat="t in prod.prodArray" 
-					class='product-detail'>
-                <img class='img-responsive' src="http://lorempixel.com/output/nature-q-c-350-350-5.jpg" alt='alt for image'>
-                <nav class="button-nav">
-                    <div class='product-select'>
-                        <button id="a" class='info-button' data-toggle='dropdown' aria-expanded='false'>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="">Small</a>
-                            </li>
-                            <li><a href="#">Medium</a>
-                            </li>
-                            <li><a href="#">Large</a>
-                            </li>
-                            <li><a href="#">X-Large</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end of a button -->
-                    <div class='product-select'>
-                        <button id="b" class='info-button' data-toggle='dropdown' aria-expanded='false'>
-                            <span class="glyphicon glyphicon-th-large"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="">Something else</a>
-                            </li>
-                            <li><a href="#">Medium</a>
-                            </li>
-                            <li><a href="#">Large</a>
-                            </li>
-                            <li><a href="#">X-Large</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end of a button -->
-                    <div class='product-select'>
-                        <button id="c" class='info-button' data-toggle='dropdown' aria-expanded='false'>
-                            <span class="glyphicon glyphicon-tint"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="">Small</a>
-                            </li>
-                            <li><a href="#">Medium</a>
-                            </li>
-                            <li><a href="#">Large</a>
-                            </li>
-                            <li><a href="#">X-Large</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end of a button -->
-                    <div class='product-select'>
-                        <button id="d" class='info-button' data-toggle='dropdown' aria-expanded='false'>
-                            <span class="glyphicon glyphicon-shopping-cart"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="">Small</a>
-                            </li>
-                            <li><a href="#">Medium</a>
-                            </li>
-                            <li><a href="#">Large</a>
-                            </li>
-                            <li><a href="#">X-Large</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end of a button -->
-                    <div class='product-select'>
-                        <button id="e" class='info-button' data-toggle='dropdown' aria-expanded='false'>
-                            <span class="glyphicon glyphicon-heart-empty"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="">Small</a>
-                            </li>
-                            <li><a href="#">Medium</a>
-                            </li>
-                            <li><a href="#">Large</a>
-                            </li>
-                            <li><a href="#">X-Large</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end of a button -->
-                </nav>
-                <!-- buttons below product -->
-                <h3 class="product-name">{{"Product Name"}}</h3>
-                <span class="price">{{"99.99" | currency }}</span>
-            </div>
-            <!--entire product square -->
-
-        </div>
-    </div>
-    <!--product container called product-wrapper -->
+<body ng-app='elproduct'>
+	<div id='container'>			
+		<section class='product-wrap' ng-controller='ProductController as product'>
+			<section class ='topcontent'>	
+				<div class='morepictures' ng-click='product.morepics()'>M</div>	
+					<div class='imageholder'>	
+							<img ng-src='{{product.pics[product.imgnum]}}' 
+						alt='product picture'/>				
+					</div><!--imageholder-->		
+			</section><!--topcontent-->	
+			<div class='productinfo'>
+				<nav class='productbuttons'>	
+					<ul>
+						<li>M</li>
+						<li ng-mouseover='product.moused()'>M</li>
+						<li>M</li>
+						<li>M</li>
+					</ul>
+				</nav><!--productbuttons-->
+				<div class='title'><span>{{'Lochness Monster'}}</span></div>
+				<div class='price'><span>{{'3.50' | currency}}</span></div>
+			</div><!--productinfo-->	
+		</section><!--product-wrap-->	
+	</div><!--container -->		
+	<!--product container called product-wrapper -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>

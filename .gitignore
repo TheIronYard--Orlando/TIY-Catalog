@@ -1,2 +1,8 @@
 .
 node_modules
+*.swa
+*.swp
+*.swo
+.DS_Store
+.DS_Store?
+bower_components
