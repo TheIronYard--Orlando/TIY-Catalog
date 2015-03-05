@@ -8,18 +8,28 @@ $main: cornflowerblue;
 	width: 33%;
 	position: relative;	
 	border: 3px solid blue;	
-	img {
-		width: 70%;
-		margin: 0 15%;
-	}	
+		.imageholder{		
+			img {
+				width: 70%;
+				margin: 0 15%;
+			}	
+		}
 	.morepictures {
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 30px;
 		height: 30px;
-		outline: 1px solid red;		
 		text-align: center;	
+		cursor: pointer;
+		border-left: 3px solid blue;
+		border-bottom: 3px solid blue;
+		line-height: 2em;
+		color: blue;	
+	}
+	.morepictures:hover {
+		background-color: blue;
+		color: white;
 	}
 	.productinfo {
 		position: relative;	
