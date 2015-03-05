@@ -16,10 +16,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- bower:css -->
     <!--  endbower -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="scss/products.scss">
-    <link rel="stylesheet" href="css/products.css">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
     <!-- bower:js -->
     <script src='/bower_components/jquery/dist/jquery.js'></script>
     <script src='/bower_components/angular/angular.js'></script>
@@ -32,42 +29,37 @@
 
 <body ng-app="tiy-catalog" ng-controller="StoreController as store">
 
-    <div class="container">
+    <div class="container-fluid">
 
         <nav class="navbar">
-            <a ng-click="store.setView('list')" class="glyphicon glyphicon-th-list"></a>
-            <a ng-click="store.setView('grid')" class="navAnchors glyphicon glyphicon-th"></a>
+            <a href="#" ng-click="store.setView('list')" ng-class="{true: 'active'}[store.getView() === 'list']" class="glyphicon glyphicon-th-list"></a>
+            <a href="#" ng-click="store.setView('grid')" ng-class="{true: 'active'}[store.getView() === 'grid']" class="glyphicon glyphicon-th"></a>
         </nav>
 
-        <section class="tab-content container-fluid">
-            <div ng-show="store.isSelected(1)" class="listings" ng-class="store.getView()">
-                <div ng-repeat="item in store.items" class="listing">
-                    <img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
+        <section class="tab-content">
+            <ul ng-show="store.isSelected(1)" class="listings" ng-class="store.getView()">
+                <li ng-repeat="item in store.items" class="listing">
+                    <a href="#"><img class="text-center grid-img" ng-src="{{item.MainImage[0].url_75x75}}">
+                    </a>
                     <h1>{{item.title}}</h1>
                     <span class="price">{{item.price | currency}}</span>
                     <p class="grid-descrition">{{item.description}}</p>
                     <div class="list-button">
-                        <a class="cartbutton">
-                            <icon class="glyphicon glyphicon-plus-sign">
-                            </icon> Add to cart
+                        <a href="#" class="cartbutton">
+                            <icon class="glyphicon glyphicon-plus-sign"></icon> Add to cart
                         </a>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
 
     </div>
 
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-    </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/products.js"></script>
+    <script src="scripts/products.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type='text/javascript' id="__bs_script__">
         document.write("<script async src='//HOST:3004/browser-sync/browser-sync-client.1.9.1.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
     </script>
-
 
 </body>
 

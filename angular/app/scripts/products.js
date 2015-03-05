@@ -1,7 +1,6 @@
 (function () {
     var app = angular.module("tiy-catalog", []);
 
-
     app.controller('StoreController', function () {
 
         var self = this;
@@ -23,12 +22,13 @@
 
         this.selectTab = function (setTab) {
             self.tab = setTab;
-            console.log(self.tab)
+            //            console.log(self.tab)        
         }
 
         this.isSelected = function (nextTab) {
             return self.tab === nextTab;
         }
+        console.log(this.isSelected(1));
     });
 
 
