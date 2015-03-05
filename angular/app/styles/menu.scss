@@ -97,46 +97,57 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.container h1 {
-    font-size: 4em;
+h1 {
+    text-align: center;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+.smallnav ul {
     list-style: none;
-    text-align: center; 
+    padding-left: 0;
 }
 
+.cattitle {
+    background-color: cornflowerblue;
+    margin: 1px 0;
+    padding: 1ex 0;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 200;
+    font-family: arial;
+    cursor: pointer;
+}
 
-/*#navigation {
-    background-color: purple;
-}*/
+.cattitle:hover {
+    color: blue;
+}
 
+.catbox {
+    background-color: snow;
+    color: darkgray;
+}
 
-.navbar a {
+.catbox img {
+    margin: .5ex 2em .5ex 2em;
+}
+
+.catbox div {
+    border-bottom: 1px solid darkgray;
+}
+
+a {
     text-decoration: none;
-    color: #FFF;
+    color: inherit;
 }
 
-
-.navbar  li {
-    margin-top: .75ex;
-    font-size: 3ex;
-    text-align: center; 
-}   
-
-#content {
-    margin: auto;
-}   
-
-.active a {
-    color: cornflowerblue;
+a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
-
-
-
+.catbox div:hover img {
+    opacity: .5;
+}
 
 
 

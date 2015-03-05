@@ -1,7 +1,7 @@
 
 (function(){
 
-    var app = angular.module("Etsy", ['ngAnimate']);
+    var app = angular.module("Etsy", []);
 
     
      app.controller("TabController", function() {

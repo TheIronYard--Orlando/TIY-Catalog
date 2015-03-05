@@ -12,16 +12,10 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-
-
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <!-- bower:css -->
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
-        <!-- endbower -->
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="styles/menu.css">
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -29,97 +23,180 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="container">
+        <div >
            <h1>Angular Store</h1>
-           <section ng-controller="TabController as tab">
-            
-                <div>
-                <nav class="navbar navbar-inverse ">
-                    <ul id="navigation">
-                        <li ng-class="{active: tab.isSet(1)}" class="col-xs-12 col-sm-3">
-                            <a href class="switcharoo" ng-click="tab.setTab(1)">Pets</a>
-                        </li>
-                        <li ng-class="{active: tab.isSet(2)}" class="col-xs-12 col-sm-3">
-                            <a href class="switcharoo" ng-click="tab.setTab(2)">MensWear</a>
-                        </li>
-                        <li ng-class="{active: tab.isSet(3)}" class="col-xs-12 col-sm-3">
-                            <a href class="switcharoo" ng-click="tab.setTab(3)">"Art"</a>
-                        </li>
-                        <li ng-class="{active: tab.isSet(4)}" class="col-xs-12 col-sm-3">
-                            <a href class="switcharoo" ng-click="tab.setTab(4)">Geekery</a>
-                        </li>
-                    </ul>
-                </nav>
-                </div>
-                <div id="content">
-               <div ng-controller="Cat1Controller as Cat1" class="showtab" ng-show="tab.isSet(1)">
-                   <div class="row">     
-                        <ul>
-                            <li ng-repeat="listing in Cat1.results" class="col-xs-12 col-sm-3">
-                                <img ng-src={{listing.MainImage.url_170x135}}>
-                                <div>{{listing.title.substring(0,20)+"..."}}</div>
-                                <div>{{listing.price | currency}}</div>
-                            </li>
-                            
-                        </ul>
-                   </div>
-               </div> <!-- END TAB 1 -->
-               
-               <div ng-controller="Cat2Controller as Cat2" class="showtab" ng-show="tab.isSet(2)">
-                   <div class="row">     
-                        <ul>
-                            <li ng-repeat="listing in Cat2.results" class="col-xs-12 col-sm-3">
-                                <img ng-src={{listing.MainImage.url_170x135}}>
-                                <div>{{listing.title.substring(0,20)+"..."}}</div>
-                                <div>{{listing.price | currency}}</div>
-                            </li>
-                        </ul>
-                   </div>
-                  
-               </div> <!-- END TAB 2-->
-               
-               <div ng-controller="Cat3Controller as Cat3" class="showtab" ng-show="tab.isSet(3)">
-                   <div class="row">     
-                        <ul>
-                            <li ng-repeat="listing in Cat3.results" class="col-xs-12 col-sm-3">
-                                <img ng-src={{listing.MainImage.url_170x135}}>
-                                <div>{{listing.title.substring(0,20)+"..."}}</div>
-                                <div>{{listing.price | currency}}</div>
-                            </li>
-                        </ul>
-                   </div>
-               </div> <!-- END TAB 3 -->
-               
-               <div ng-controller="Cat4Controller as Cat4" class="showtab" ng-show="tab.isSet(4)">
-                   <div class="row">     
-                        <ul>
-                            <li ng-repeat="listing in Cat4.results" class="col-xs-12 col-sm-3">
-                                <img ng-src={{listing.MainImage.url_170x135}}>
-                                <div>{{listing.title.substring(0,20)+"..."}}</div>
-                                <div>{{listing.price | currency}}</div>
-                            </li>  
-                        </ul>
-                   </div>
-               </div> <!-- END TAB 4 -->
-               
-
-
-            </div>
-            </section>
-
+           <nav class="smallnav">
+                <div class="cattitle">Art</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Art Zines</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Collage & Mixed Media</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Custom Portraits</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Decorative Arts</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Drawing & Illustration</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Figurines & Art Objects</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Painting</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Photography</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Printmaking</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Prints & Posters</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Sculpture</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">More</div></a>
+                    </div>
+                <div class="cattitle">Home & Living</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bath & Beauty</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Books, Music & Media</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Collectibles</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Decor & Housewares</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Dining & Entertaining</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Electronics & Gadgets</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Food Market</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Furniture</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Kitchen</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Lighting</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Musical Instruments</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Pets</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Staionery & Party</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Storage & Organization</div></a>
+                <div class="cattitle">Mobile Accessories</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Decals</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Docking Staions & Chargers</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Flash Drives</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Gear for Android</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Gear for Kindle</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Gear for iPad Mini</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Gear for iPad</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Gear for iPhone</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Headphones</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Keyboard Accessories</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Laptop Bags</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Laptop Cases</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Phone Cases & Wallets</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Phone Covers</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Phone Plugs & Charms</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Speakers</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Stands</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Styluses</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Tablet Accessories</div></a>
+                    </div>
+                <div class="cattitle">Jewelry</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Body</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bracelets</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Brooches</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Earrings</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Eco-Friendly</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Fine Jewelry</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Kids</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Men</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Necklaces</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Personalized</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Rings</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Storage & Organization</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Watches</div></a>
+                    </div>
+                <div class="cattitle">Women</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Accessories</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bags & Purses</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bottoms</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Costumes</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Dresses</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Outerwear</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Shoes</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Sleepwear & Intimates</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Specialty Sizes</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Swimwear & Coverups</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Tops</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">More</div></a>
+                    </div>
+                <div class="cattitle">Men</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Tanks</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bags & Wallets</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Belts & Buckles</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bottoms</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Coats & Jackets</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Costumes</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Cufflinks</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Hats</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Hoodies & Sweatshirts</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Shirts</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Shoes</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Suits</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Sweaters</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">T-Shirts</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Ties, Clips & Bow Ties</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Other Clothing</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Other Accessories</div></a>
+                    </div>                            
+                <div class="cattitle">Kids</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Baby & Toddler</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bath</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Boys</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Costumes</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Eco-Friendly</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Furniture & Decor</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Girls</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Personalized</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">School & Learning</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Special Occasions</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Toys</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">More</div></a>
+                    </div>    
+                <div class="cattitle">Vintage</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Accessories</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Antiques</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Art</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bags & Purses</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Books</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Collectibles</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Electronics</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Furniture</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Home Decor</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Housewares</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Jewelry</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Paper Ephemera</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Serving</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Toys</div></a>
+                    </div>    
+                <div class="cattitle">Weddings</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Bridal Accessories</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Decor</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Dresses</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Groom's Corner</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Paper Goods</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Rings</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Wedding Party</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Real Weddings</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Registry</div></a>
+                    </div>     
+                <div class="cattitle">Craft Supplies</div>
+                    <div class="catbox">
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">DIY Weddings</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Fine Arts</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Floral & Gardening</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Food Crafting</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Framing</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Gift Wrapping</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Jewelry Making</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Knitting & Crochet</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Paper Crafts</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Scrapbooking</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Sewing, Quilting & Neeldle Crafts</div></a>
+                        <a href="#"><div><img src="http://lorempixel.com/50/50">Woodworking</div></a>
+                    </div>     
+           </nav>
         </div> <!-- END CONTAINER -->
 
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        <!-- bower:js -->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular-animate/angular-animate.js"></script>
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <!-- endbower -->
-
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="scripts/plugins.js"></script>
+        <script src="scripts/menu.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
