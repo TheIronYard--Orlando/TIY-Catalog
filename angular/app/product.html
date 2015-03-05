@@ -23,12 +23,22 @@
 	<div id='container'>			
 		<section class='product-wrap' ng-controller='ProductController as product'>
 			<section class ='topcontent'>	
-				<a href ><nav class='morepictures'>H</nav></a>	
+				<a href ><div class='morepictures'>H</div></a>	
 				<img src=
-				'http://ecx.images-amazon.com/images/I/413Bb57WyVL._SX342_.jpg' />				
+				'http://ecx.images-amazon.com/images/I/413Bb57WyVL._SX342_.jpg' 
+				alt='product image' />				
 			</section><!--topcontent-->	
 			<div class='productinfo'>
-					<span>{{'title'}}</span><span>{{'price'}}</span>
+				<nav class='productbuttons'>	
+					<ul>
+						<li>M</li>
+						<li>M</li>
+						<li>M</li>
+						<li>M</li>
+					</ul>
+				</nav><!--productbuttons-->
+				<span class='title'>{{'Product Title'}}</span>
+				<span class='price'>{{'price'}}</span>
 			</div><!--productinfo-->	
 		</section><!--product-wrap-->	
 	</div><!--container -->		

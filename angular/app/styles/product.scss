@@ -6,9 +6,8 @@ $main: cornflowerblue;
 }
 .product-wrap {
 	width: 33%;
-	outline: 1px solid black;
 	position: relative;	
-	
+	border: 3px solid blue;	
 	img {
 		width: 70%;
 		margin: 0 15%;
@@ -17,12 +16,58 @@ $main: cornflowerblue;
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 20px;
-		height: 20px;
+		width: 30px;
+		height: 30px;
 		outline: 1px solid red;		
 		text-align: center;	
 	}
+	.productinfo {
+		position: relative;	
+		height: 3em;
+		ul{
+			margin: 0;
+			padding: 0;	
+			list-style-type: none;
+		}
+		li {
+			float: left;
+			box-sizing: border-box;
+			width: 25%;
+			margin: 0;
+			padding: 0;
+			border-right: 3px solid blue;
+			text-align: center;	
+			line-height: 1.5em;	
+			border-top: 3px solid blue;	
+			color: blue;	
+			cursor: pointer;	
+			font-size: 2em;	
+		}
+		li:last-child {
+			border-right: 0;	
+		}	
+		li:hover{
+			background-color: blue;
+			color: white;	
+		}	
+		.productbuttons {
+		}		
+		.title {
+			position: absolute;
+			bottom: -2em;
+			left: 0;
+			font-size: 2em;	
+			color: blue;	
+		}	
+		.price {
+			position: absolute;
+			bottom: -2em;
+			right: 0;
+			font-size: 2em;
+			color: blue;
+		}
 
+	}
 
 
 
