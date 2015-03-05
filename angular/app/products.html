@@ -35,8 +35,8 @@
     <div class="container-fluid">
 
         <nav class="navbar">
-            <a ng-click="store.setView('list')" class="glyphicon glyphicon-th-list"></a>
-            <a ng-click="store.setView('grid')" class="navAnchors glyphicon glyphicon-th"></a>
+            <a href="#" ng-click="store.setView('list')" ng-class="{active:store.isSeclected(2)}" class="glyphicon glyphicon-th-list"></a>
+            <a href="#" ng-click="store.setView('grid')" ng-class="{ active:store.isSeclected(1)}" class="navAnchors glyphicon glyphicon-th"></a>
         </nav>
 
         <section class="tab-content">

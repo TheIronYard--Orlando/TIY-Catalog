@@ -9,6 +9,10 @@ $grayColor: #D0D0D0;
     color: $blueColor;
 }
 
+.active:before {
+    color: $blueColor;
+}
+
 .container-fluid {
     border: 3px solid #47a3da;
     padding: 2em 30px 0;

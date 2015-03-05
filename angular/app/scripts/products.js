@@ -28,6 +28,7 @@
         this.isSelected = function (nextTab) {
             return self.tab === nextTab;
         }
+        console.log(this.isSelected(1));
     });
 
 
