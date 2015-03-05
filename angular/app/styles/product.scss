@@ -53,18 +53,16 @@ $main: cornflowerblue;
 		.productbuttons {
 		}		
 		.title {
-			position: absolute;
-			bottom: -2em;
-			left: 0;
 			font-size: 2em;	
 			color: blue;	
+			float: left;	
+			margin-top: 1em;	
 		}	
 		.price {
-			position: absolute;
-			bottom: -2em;
-			right: 0;
 			font-size: 2em;
 			color: blue;
+			float: right;
+			margin-top: 1em;
 		}
 
 	}
